@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Beginner-friendly interactive guide for the Call of Duty Black Ops 2 Tranzit Tower of Babble Easter Egg. Maxis and Richtofen paths, checklists, and location reference." />
+  <meta name="theme-color" content="#0f1412" />
+  <title>Tower of Babble — Tranzit Easter Egg Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-kicker">Black Ops II · Zombies</span>
+        <p class="brand-title">Tower of Babble</p>
+      </div>
+      <div class="header-actions">
+        <div class="progress-chip" title="Checked steps for the active path">
+          Progress <strong id="progressText">0 / 0</strong>
+        </div>
+        <button type="button" class="btn btn-ghost" id="resetProgress" title="Clear saved checklist">Reset</button>
+      </div>
+    </div>
+    <nav class="section-nav" aria-label="Guide sections">
+      <a href="#overview">Overview</a>
+      <a href="#before">Before You Start</a>
+      <a href="#map">Map</a>
+      <a href="#setup">Shared Setup</a>
+      <a href="#paths">Paths</a>
+      <a href="#locations">Locations</a>
+      <a href="#troubleshoot">Help</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="overview">
+      <p class="eyebrow">Interactive companion guide</p>
+      <h1>Tranzit Easter Egg</h1>
+      <p class="hero-lead">
+        A complete, beginner-friendly walkthrough of <strong>Tower of Babble</strong> —
+        the main Easter Egg on TranZit. Use this on a phone or tablet next to your game:
+        pick a path, check off steps as you go, and jump to part locations when you get stuck.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-pill">Map <span>TranZit / Green Run</span></div>
+        <div class="meta-pill">Difficulty <span>Original only</span></div>
+        <div class="meta-pill">Maxis <span>2+ players</span></div>
+        <div class="meta-pill">Richtofen <span>4 players best</span></div>
+        <div class="meta-pill">Reward <span>Tower of Babble</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="choose-heading">
+      <div class="section-header">
+        <h2 id="choose-heading">Choose your path</h2>
+      </div>
+      <p class="section-sub">
+        TranZit has <strong>two different Easter Egg endings</strong>. Your team must agree
+        on one before power is settled. You cannot freely switch mid-run after committing.
+      </p>
+      <div class="grid-2">
+        <article class="path-card maxis">
+          <h3>Maxis path</h3>
+          <ul>
+            <li>Easier and shorter</li>
+            <li>Minimum <strong>2 players</strong> (4 is smoother)</li>
+            <li>Turn power <strong>ON, then OFF</strong></li>
+            <li>Need Turbines + EMP grenades</li>
+            <li>Kill the Avogadro under the pylon</li>
+            <li>Completion color: <strong>orange</strong></li>
+          </ul>
+          <div class="card-actions">
+            <button type="button" class="btn btn-primary" data-jump-path="maxis">Open Maxis steps</button>
+          </div>
+        </article>
+        <article class="path-card richtofen">
+          <h3>Richtofen path</h3>
+          <ul>
+            <li>Longer, more coordination</li>
+            <li><strong>4 players</strong> strongly recommended</li>
+            <li>Keep power <strong>ON</strong></li>
+            <li>Someone should play as <strong>Samuel</strong></li>
+            <li>Build &amp; destroy Jet Gun, then EMP 4 lamps</li>
+            <li>Completion color: <strong>blue</strong></li>
+          </ul>
+          <div class="card-actions">
+            <button type="button" class="btn btn-cyan" data-jump-path="richtofen">Open Richtofen steps</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="before">
+      <div class="section-header">
+        <h2>Before you start</h2>
+      </div>
+      <p class="section-sub">
+        Read this once before loading the map. Everything below assumes you have never
+        done a TranZit Easter Egg before.
+      </p>
+
+      <div class="panel">
+        <p class="eyebrow">Hard requirements</p>
+        <ul>
+          <li><strong>Original difficulty only.</strong> The Easter Egg will not complete on easier custom settings that disable it.</li>
+          <li><strong>Online / local co-op as required by your path.</strong> Maxis needs at least two players on console/vanilla. Richtofen is designed for four.</li>
+          <li><strong>Agree on the path.</strong> Maxis wants power off. Richtofen wants power on. Mixing steps soft-locks the wrong ending.</li>
+          <li><strong>Mystery Box luck.</strong> Both paths need EMP Grenades from the box. Richtofen also needs an explosive weapon (Ray Gun recommended).</li>
+        </ul>
+        <div class="callout danger">
+          <strong>Do not skip the path decision</strong>
+          <p>If one player turns power off for Maxis while others are building the Jet Gun for Richtofen, you will waste a lot of time. Decide in the lobby.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">What you will hear</p>
+        <p style="margin:0;color:var(--text-muted)">
+          On the <strong>Maxis</strong> path, Dr. Maxis speaks over the PA / radio after power events.
+          On the <strong>Richtofen</strong> path, Richtofen speaks <em>only to Samuel Stuhlinger</em>
+          (the character with the green eyes / who ate zombie flesh in the comics).
+          If nobody is Samuel, your team may still do the steps, but you lose the voice cues that confirm progress.
+        </p>
+      </div>
+
+      <div class="panel">
+        <p class="eyebrow">Quick glossary</p>
+        <dl class="glossary">
+          <dt>Turbine</dt>
+          <dd>Portable generator buildable at Bus Depot. Powers doors, lampposts (when main power is off), and is required for Maxis.</dd>
+          <dt>Pylon</dt>
+          <dd>Huge electrical tower in the cornfield between Farm and Power Station. Main Easter Egg site.</dd>
+          <dt>Avogadro</dt>
+          <dd>Electric boss that appears after power is turned on (and can be re-spawned with storms). Looks like a humanoid made of electricity.</dd>
+          <dt>Denizen</dt>
+          <dd>Small creature in the fog that jumps on your head. Under a green lamppost it digs a teleport hole.</dd>
+          <dt>EMP Grenades</dt>
+          <dd>Special grenades from the Mystery Box. Disable electronics and are used to kill Avogadro / hit lampposts.</dd>
+          <dt>Jet Gun</dt>
+          <dd>Buildable wonder weapon (Thrustodyne Aeronautics Model 23). Required only for Richtofen’s path.</dd>
+          <dt>Navcard Table</dt>
+          <dd>Buildable table under the pylon. Needed for the overall Victis storyline setup; build it if it is not already there.</dd>
+          <dt>Green lampposts</dt>
+          <dd>Street lamps that glow green when powered. Used for Denizen teleports and the final Easter Egg steps.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="map">
+      <div class="section-header">
+        <h2>Know the map</h2>
+      </div>
+      <p class="section-sub">
+        TranZit is a large map connected by a looping bus and dangerous fog. Learn the stop order
+        so you never wonder “where do I go next?”
+      </p>
+
+      <div class="panel">
+        <p class="eyebrow">Bus route (main stops)</p>
+        <div class="map-flow">
+          <div class="map-stop">
+            <div class="stop-index">1</div>
+            <div>
+              <h3>Bus Depot (spawn)</h3>
+              <p>Starting area. Build the Turbine here. Navcard and meteor part nearby. Safe early lamppost for finals.</p>
+            </div>
+          </div>
+          <div class="map-stop side">
+            <div class="stop-index">T</div>
+            <div>
+              <h3>Tunnel (between Depot and Diner)</h3>
+              <p>Fog/road stretch with the M16 wall-buy. Jet Gun engine and sometimes the Navcard wooden board spawn here.</p>
+            </div>
+          </div>
+          <div class="map-stop">
+            <div class="stop-index">2</div>
+            <div>
+              <h3>Diner</h3>
+              <p>Restaurant / gas station area. Garage can hold the Navcard radio. Lamppost outside is great for final steps.</p>
+            </div>
+          </div>
+          <div class="map-stop">
+            <div class="stop-index">3</div>
+            <div>
+              <h3>Farm</h3>
+              <p>House and barn. Fridge area can hold a Navcard power-box part. Good points / camping for box hits.</p>
+            </div>
+          </div>
+          <div class="map-stop side">
+            <div class="stop-index">C</div>
+            <div>
+              <h3>Cornfield — Pylon &amp; Nacht</h3>
+              <p><strong>Left / road side:</strong> the big pylon (Easter Egg tower). <strong>Right paths:</strong> Nacht der Untoten prototype building (Jet Gun handle / radio spawn).</p>
+            </div>
+          </div>
+          <div class="map-stop">
+            <div class="stop-index">4</div>
+            <div>
+              <h3>Power Station</h3>
+              <p>Enter via the outhouse hatch into the lab. Build and flip the power switch here. Jet Gun wires are on the lava/catwalk side after power.</p>
+            </div>
+          </div>
+          <div class="map-stop side">
+            <div class="stop-index">H</div>
+            <div>
+              <h3>Hunter’s Cabin</h3>
+              <p>In the fog between Power Station and Town. Jet Gun pressure gauge and Bowie Knife live here.</p>
+            </div>
+          </div>
+          <div class="map-stop">
+            <div class="stop-index">5</div>
+            <div>
+              <h3>Town</h3>
+              <p>Final bus stop. Bar workbench builds the Jet Gun (near Stamin-Up). Bank, Pack-a-Punch after power, lava streets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:1rem">
+          <strong>Fog survival tip</strong>
+          <p>Denizens attack in fog. Melee them off your head quickly. Lava on the road damages you — jump over cracks. The bus is slower but safer for long trips.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="setup">
+      <div class="section-header">
+        <h2>Shared setup</h2>
+      </div>
+      <p class="section-sub">
+        Do these first on either path. Check items off as you finish them. Details for every part spawn are also in <a href="#locations">Locations</a>.
+      </p>
+
+      <div class="step-list" data-path="shared">
+        <details class="step" open data-step-id="shared-turbine">
+          <summary class="step-summary">
+            <input class="step-check" type="checkbox" aria-label="Mark Build the Turbine complete" />
+            <div class="step-title-wrap">
+              <div class="step-number">Setup 1</div>
+              <h3 class="step-title">Build the Turbine at Bus Depot</h3>
+            </div>
+            <span class="step-toggle"></span>
+          </summary>
+          <div class="step-body">
+            <p>The Turbine is a portable generator. On Maxis it is mandatory for multiple steps. On Richtofen it is still extremely useful for doors and teleports.</p>
+            <h4>What to do</h4>
+            <ol>
+              <li>Stay in the Bus Depot starting room / nearby interior.</li>
+              <li>Find all <strong>3 Turbine parts</strong> (fan, mannequin/body, and tail/vane pieces). They always spawn inside the depot starting area.</li>
+              <li>Take them to the <strong>workbench</strong> in the depot and build the Turbine.</li>
+              <li>Place the Turbine next to the powered door near the workbench to open both exits without buying the main door.</li>
+              <li><strong>Pick the Turbine back up</strong> before leaving. You carry it as equipment.</li>
+            </ol>
+            <div class="callout cyan">
+              <strong>Team tip</strong>
+              <p>On Maxis with 2–4 players, every player should eventually grab their own Turbine from the same workbench (parts respawn for each builder). Fresh Turbines matter — damaged ones fail steps.</p>
+            </div>
+          </div>
+        </details>
+
+        <details class="step" data-step-id="shared-navcard">
+          <summary class="step-summary">
+            <input class="step-check" type="checkbox" aria-label="Mark Navcard Table complete" />
+            <div class="step-title-wrap">
+              <div class="step-number">Setup 2</div>
+              <h3 class="step-title">Build the Navcard Table under the pylon</h3>
+            </div>
+            <span class="step-toggle"></span>
+          </summary>
+          <div class="step-body">
+            <p>If the table is already built on your account/profile under the cornfield pylon, you can skip collecting parts. First-time / fresh accounts usually need to build it.</p>
+            <h4>Navcard (optional but recommended)</h4>
+            <ul>
+              <li>Behind the Bus Depot, check behind a dumpster for the <strong>Navcard</strong> pickup.</li>
+              <li>A small card icon appears near your score when you have it.</li>
+              <li>Inserting it later may say it is the “wrong” card — that is normal for TranZit’s card. The table still needs to exist.</li>
+            </ul>
+            <h4>Carry each part to the pylon workbench</h4>
+            <ul class="checklist" data-sublist="navcard-parts">
+              <li><input type="checkbox" data-check-id="nav-meteor" /> <span><strong>Meteor (115 rock)</strong> — Bus Depot, in a crevice / zombie barrier near the rear area by the Mystery Box side.</span></li>
+              <li><input type="checkbox" data-check-id="nav-board" /> <span><strong>Wooden board / table</strong> — Tunnel by the M16, <em>or</em> Power Station catwalk edge under Tombstone.</span></li>
+              <li><input type="checkbox" data-check-id="nav-radio" /> <span><strong>Radio</strong> — Diner garage locker top, <em>or</em> Nacht der Untoten table.</span></li>
+              <li><input type="checkbox" data-check-id="nav-box" /> <span><strong>Electrical / power box</strong> — Farm fridge area, <em>or</em> Town dumpster near upper Mystery Box.</span></li>
+            </ul>
+            <p>You can only carry one buildable part at a time. Place each under the pylon, then fetch the next.</p>
+          </div>
+        </details>
+
+        <details class="step" data-step-id="shared-power">
+          <summary class="step-summary">
+            <input class="step-check" type="checkbox" aria-label="Mark power switch built complete" />
+            <div class="step-title-wrap">
+              <div class="step-number">Setup 3</div>
+              <h3 class="step-title">Reach Power Station and build the power switch</h3>
+            </div>
+            <span class="step-toggle"></span>
+          </summary>
+          <div class="step-body">
+            <ol>
+              <li>Ride the bus: Depot → Diner → Farm → <strong>Power Station</strong>.</li>
+              <li>Buy the hatch/outhouse door and drop into the underground lab.</li>
+              <li>Collect the three power parts in that facility:
+                <ul>
+                  <li>Zombie hand / arm</li>
+                  <li>Lever / switch handle</li>
+                  <li>Circuit / power panel</li>
+                </ul>
+              </li>
+              <li>Build them on the power workbench and prepare to flip the switch.</li>
+            </ol>
+            <div class="callout danger">
+              <strong>Path split happens here</strong>
+              <p><strong>Maxis:</strong> turn power ON, wait for Maxis to finish talking, then turn it OFF.<br />
+              <strong>Richtofen:</strong> turn power ON and leave it ON for the rest of the egg.</p>
+            </div>
+            <p>Turning power on the first time also introduces the Avogadro. Clear him or run as needed, then continue your chosen path below.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="paths">
+      <div class="section-header">
+        <h2>Path walkthroughs</h2>
+      </div>
+      <p class="section-sub">Switch between paths anytime. Your checklist progress is saved separately for Maxis and Richtofen in this browser.</p>
+
+      <div class="mode-bar" role="tablist" aria-label="Easter Egg path">
+        <button type="button" class="btn" role="tab" id="tab-maxis" aria-selected="true" aria-pressed="true" data-path-tab="maxis">Maxis path</button>
+        <button type="button" class="btn richtofen" role="tab" id="tab-richtofen" aria-selected="false" aria-pressed="false" data-path-tab="richtofen">Richtofen path</button>
+      </div>
+
+      <!-- MAXIS -->
+      <div class="path-panel" id="panel-maxis" data-path="maxis" role="tabpanel" aria-labelledby="tab-maxis">
+        <div class="panel">
+          <p class="eyebrow">Maxis overview</p>
+          <ol style="margin:0;padding-left:1.2rem;color:var(--text-muted)">
+            <li>Power ON → wait → power OFF</li>
+            <li>Get EMP Grenades from the Mystery Box</li>
+            <li>At the pylon: place Turbines, spawn Avogadro, EMP him</li>
+            <li>Power two green lampposts with Turbines (keep pylon Turbines up in 4-player)</li>
+          </ol>
+        </div>
+
+        <div class="step-list">
+          <details class="step" open data-step-id="maxis-power">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Maxis 1</div>
+                <h3 class="step-title">Turn power ON, then OFF after Maxis speaks</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Flip the power switch ON in the Power Station lab.</li>
+                <li><strong>Wait</strong> until Dr. Maxis finishes his dialogue about the power interfering with communication.</li>
+                <li>Flip the switch again to turn power <strong>OFF</strong>.</li>
+                <li>Power-off seals the lab door — place a Turbine to open it, pick the Turbine up, and leave.</li>
+              </ol>
+              <div class="callout danger">
+                <strong>Perks will die</strong>
+                <p>With power off, electric perk machines stop working and purchased electric perks fail. Buy essential gear before committing, or accept running without them. Tombstone / strategy around this.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="maxis-emp">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Maxis 2</div>
+                <h3 class="step-title">Get EMP Grenades from the Mystery Box</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <p>At least one player needs EMP Grenades. Follow the blue light in the sky to the current Mystery Box location.</p>
+              <ul>
+                <li>Do <strong>not</strong> waste EMPs on random electronics before the Avogadro step.</li>
+                <li>Save points; this can take many spins.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="maxis-turbines">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Maxis 3</div>
+                <h3 class="step-title">Place two Turbines under the cornfield pylon</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Travel on foot into the cornfield between Farm and Power Station.</li>
+                <li>Find the large metal pylon / transmission tower (Navcard Table is underneath).</li>
+                <li>Have <strong>two players</strong> place working Turbines in separate corners under the pylon (often described as either side of the Navcard Table / near a back leg).</li>
+                <li>Keep zombies from destroying the Turbines.</li>
+              </ol>
+              <div class="callout">
+                <strong>Damaged Turbine?</strong>
+                <p>If it is almost broken, let zombies finish it and rebuild a fresh one at Bus Depot. Do not risk the EMP step on a dying Turbine.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="maxis-avogadro">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Maxis 4</div>
+                <h3 class="step-title">Spawn Avogadro during the storm, then EMP him</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <h4>Spawn</h4>
+              <ol>
+                <li>Stay under the pylon and survive rounds.</li>
+                <li>Wait until lightning / thunderstorm is heavily active above your area (storm all around, not a distant flash).</li>
+                <li>End the round (kill the last zombie) while that storm is overhead so Avogadro spawns.</li>
+              </ol>
+              <h4>Kill with EMP</h4>
+              <ol>
+                <li>Confirm both Turbines are still running.</li>
+                <li>Lure Avogadro directly underneath the pylon.</li>
+                <li>Throw an EMP at Avogadro — <strong>not</strong> onto your Turbines (EMPs disable them).</li>
+                <li>He should launch upward into the tower. Maxis will speak if it worked.</li>
+              </ol>
+              <div class="callout cyan">
+                <strong>Safe EMP angle</strong>
+                <p>Keep Turbines on one side of the tower and pull Avogadro to the opposite side before you throw.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="maxis-lamps">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Maxis 5</div>
+                <h3 class="step-title">Power two green lampposts with Turbines</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <p>After Maxis confirms the Avogadro step, send energy from lampposts to the pylon.</p>
+              <h4>2-player lobby</h4>
+              <ol>
+                <li>Pick up your Turbines from the pylon.</li>
+                <li>Each player goes to a <strong>different</strong> green lamppost.</li>
+                <li>Easiest pair: <strong>Bus Depot</strong> lamppost + <strong>Diner</strong> lamppost.</li>
+                <li>Place a Turbine under each lamppost at the same time.</li>
+              </ol>
+              <h4>4-player lobby (recommended)</h4>
+              <ol>
+                <li>Leave <strong>two Turbines running under the pylon</strong>.</li>
+                <li>The other two players place Turbines under two different lampposts (Depot + Diner are safest).</li>
+              </ol>
+              <p><strong>Success look:</strong> lampposts glow with an orange orb / energy and send a beam toward the pylon. In the lobby afterward, TranZit’s icon is highlighted <strong>orange</strong>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- RICHTOFEN -->
+      <div class="path-panel" id="panel-richtofen" data-path="richtofen" role="tabpanel" aria-labelledby="tab-richtofen" hidden>
+        <div class="panel">
+          <p class="eyebrow">Richtofen overview</p>
+          <ol style="margin:0;padding-left:1.2rem;color:var(--text-muted)">
+            <li>Keep power ON (Samuel hears Richtofen)</li>
+            <li>Build the Jet Gun in Town</li>
+            <li>Overheat / destroy Jet Gun under the pylon</li>
+            <li>~25 explosive kills under the pylon</li>
+            <li>All four players EMP four different green lampposts together</li>
+          </ol>
+        </div>
+
+        <div class="step-list">
+          <details class="step" open data-step-id="richtofen-power">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 1</div>
+                <h3 class="step-title">Turn power ON and leave it on</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Flip the Power Station switch ON.</li>
+                <li>Do <strong>not</strong> turn it back off.</li>
+                <li>Confirm someone is playing as <strong>Samuel Stuhlinger</strong> so Richtofen’s lines can confirm steps.</li>
+              </ol>
+              <p>With power on, perks and Pack-a-Punch are available — use that advantage; this path is longer.</p>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="richtofen-jetgun">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 2</div>
+                <h3 class="step-title">Build the Jet Gun at the Town bar</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <p>Official name: Thrustodyne Aeronautics Model 23. Build at the workbench in the <strong>Town bar</strong> (near Stamin-Up). One part per trip.</p>
+              <ul class="checklist">
+                <li><input type="checkbox" data-check-id="jet-engine" /> <span><strong>Jet Engine</strong> — Tunnel between Bus Depot and Diner (near M16 / cars / garage corner).</span></li>
+                <li><input type="checkbox" data-check-id="jet-wires" /> <span><strong>Wires</strong> — Power Station lava/catwalk area after power (barrels, ledge, broken electrical box).</span></li>
+                <li><input type="checkbox" data-check-id="jet-gauge" /> <span><strong>Pressure Gauge</strong> — Hunter’s Cabin (fireplace, bed frame, or barrel).</span></li>
+                <li><input type="checkbox" data-check-id="jet-handle" /> <span><strong>Handle / handbrake</strong> — Nacht der Untoten in the cornfield (stairs, cabinets, shelf, lamp).</span></li>
+              </ul>
+              <p>Split the map among teammates so four people can deliver parts faster.</p>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="richtofen-box">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 3</div>
+                <h3 class="step-title">Get EMP Grenades and an explosive weapon</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ul>
+                <li><strong>EMP Grenades:</strong> ideally all four players (final step).</li>
+                <li><strong>Explosive kills weapon:</strong> original <strong>Ray Gun</strong> is best. Pack-a-Punched pistols (Mustang &amp; Sally) also work but can down you — TranZit has no PhD Flopper.</li>
+                <li><strong>Ray Gun Mark II does not count</strong> the same way for this explosive step — use the original Ray Gun.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="richtofen-break">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 4</div>
+                <h3 class="step-title">Destroy the Jet Gun under the pylon</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Bring the team under the cornfield pylon / Navcard Table.</li>
+                <li>Equip the Jet Gun, aim up at the structure, and <strong>hold the trigger</strong>.</li>
+                <li>Do not release when it overheats — keep firing until the gun <strong>fully breaks apart</strong> and parts fall on the ground.</li>
+                <li>Samuel should hear Richtofen confirm. If Richtofen says the pylon needs to be hotter, rebuild the Jet Gun and repeat.</li>
+              </ol>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="richtofen-explosives">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 5</div>
+                <h3 class="step-title">Get ~25 explosive kills under the pylon</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Stay underneath the pylon.</li>
+                <li>Kill about <strong>25 zombies with explosive damage</strong> in that area.</li>
+                <li>Continue until Richtofen tells Samuel the power is becoming too strong / too much.</li>
+              </ol>
+              <div class="callout">
+                <strong>Train carefully</strong>
+                <p>Ray Gun splash is safer than Mustang &amp; Sally at point-blank. Keep distance so you do not down yourself mid-count.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="step" data-step-id="richtofen-lamps">
+            <summary class="step-summary">
+              <input class="step-check" type="checkbox" />
+              <div class="step-title-wrap">
+                <div class="step-number">Richtofen 6</div>
+                <h3 class="step-title">EMP four different green lampposts at once</h3>
+              </div>
+              <span class="step-toggle"></span>
+            </summary>
+            <div class="step-body">
+              <ol>
+                <li>Assign each of the four players a <strong>different</strong> green lamppost before you start.</li>
+                <li>Good easy posts: Bus Depot, Diner, and other green lamps along the road/fog between major stops (Power area, cornfield approaches, Town/bridge approaches).</li>
+                <li>Clear zombies around each thrower.</li>
+                <li>On a shared countdown (3…2…1…), all four throw EMPs so the lamps disable in the same short window.</li>
+              </ol>
+              <p><strong>Success look:</strong> blue electrical energy from the lamps / blue beam at the pylon. Lobby icon highlights <strong>blue</strong>.</p>
+              <h4>Fewer than 4 players</h4>
+              <p>Still need four lamp hits in a tight window. A common method:</p>
+              <ol>
+                <li>At lamp A, place a Turbine (if needed) and get a Denizen on your head so it digs a portal under the lamp.</li>
+                <li>EMP lamp A, immediately jump through the portal, EMP lamp B on arrival.</li>
+                <li>Coordinate the other players on the remaining lamps in the same window.</li>
+              </ol>
+              <p>This is inconsistent. Four players is strongly preferred.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="locations">
+      <div class="section-header">
+        <h2>Location reference</h2>
+      </div>
+      <p class="section-sub">Search or filter when you are mid-game and only need “where is X?”</p>
+
+      <div class="toolbar">
+        <label class="sr-only" for="locationSearch">Search locations</label>
+        <input id="locationSearch" class="search-input" type="search" placeholder="Search: jet gun, turbine, lamppost, nacht…" autocomplete="off" />
+        <div class="filter-chips" role="group" aria-label="Filter by category">
+          <button type="button" class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="shared" aria-pressed="false">Shared</button>
+          <button type="button" class="chip" data-filter="maxis" aria-pressed="false">Maxis</button>
+          <button type="button" class="chip" data-filter="richtofen" aria-pressed="false">Richtofen</button>
+        </div>
+      </div>
+
+      <div class="ref-grid" id="refGrid">
+        <article class="ref-card" data-tags="shared turbine depot" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Shared</span><span class="tag">Buildable</span></div>
+          <h3>Turbine parts</h3>
+          <p style="margin:0;color:var(--text-muted);font-size:0.92rem">All three parts spawn inside the Bus Depot starting area. Build at the depot workbench. Place to open powered doors; pick up again after.</p>
+        </article>
+
+        <article class="ref-card" data-tags="shared power station switch hand lever circuit" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Shared</span><span class="tag">Power</span></div>
+          <h3>Power switch parts</h3>
+          <ul>
+            <li>All inside the Power Station underground lab / white room area</li>
+            <li>Hand, lever/handle, and circuit/panel</li>
+            <li>Build on the lab workbench, then flip the switch</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="shared navcard meteor rock 115 depot" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Navcard Table</span></div>
+          <h3>Meteor (115 rock)</h3>
+          <ul>
+            <li>Bus Depot rear / Mystery Box side</li>
+            <li>Look in the crevice / zombie barrier area behind the depot</li>
+            <li>Carry to the pylon in the cornfield</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="shared navcard wooden board table tunnel m16 power tombstone" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Navcard Table</span></div>
+          <h3>Wooden board</h3>
+          <ul>
+            <li><strong>Spawn A:</strong> Tunnel Depot→Diner, near M16 wall-buy / right-side barrier</li>
+            <li><strong>Spawn B:</strong> Power Station, edge of metal walkway below Tombstone</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="shared navcard radio diner garage nacht cornfield" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Navcard Table</span></div>
+          <h3>Radio</h3>
+          <ul>
+            <li><strong>Spawn A:</strong> Diner mechanic garage, on top of a locker/cabinet</li>
+            <li><strong>Spawn B:</strong> Nacht der Untoten (cornfield right path), on a table</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="shared navcard electrical box farm fridge town dumpster" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Navcard Table</span></div>
+          <h3>Electrical box</h3>
+          <ul>
+            <li><strong>Spawn A:</strong> Farm house, left of the weapon fridge</li>
+            <li><strong>Spawn B:</strong> Town, by the dumpster near the upper Mystery Box spot</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="richtofen jet gun engine tunnel m16" data-category="richtofen">
+          <div class="ref-tags"><span class="tag richtofen">Jet Gun</span></div>
+          <h3>Jet Engine</h3>
+          <ul>
+            <li>Tunnel between Bus Depot and Diner</li>
+            <li>Near M16 wall-buy, between cars, or garage-door corner</li>
+            <li>Deliver to Town bar workbench</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="richtofen jet gun wires power station lava tombstone catwalk" data-category="richtofen">
+          <div class="ref-tags"><span class="tag richtofen">Jet Gun</span></div>
+          <h3>Wires</h3>
+          <ul>
+            <li>Power Station after power is on</li>
+            <li>Lava / lower catwalk side: barrels, ledges, broken electrical box</li>
+            <li>Do not confuse with electric trap parts in the same zone</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="richtofen jet gun pressure gauge hunters cabin fireplace bed" data-category="richtofen">
+          <div class="ref-tags"><span class="tag richtofen">Jet Gun</span></div>
+          <h3>Pressure Gauge</h3>
+          <ul>
+            <li>Hunter’s Cabin between Power Station and Town</li>
+            <li>Fireplace, metal bed frame, or wooden barrel</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="richtofen jet gun handle handbrake nacht cornfield stairs cabinet" data-category="richtofen">
+          <div class="ref-tags"><span class="tag richtofen">Jet Gun</span></div>
+          <h3>Handle / handbrake</h3>
+          <ul>
+            <li>Nacht der Untoten via right-side cornfield paths</li>
+            <li>Stairs/desk, cabinets, shelf, or near a lamp</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="maxis richtofen emp mystery box grenade" data-category="maxis">
+          <div class="ref-tags"><span class="tag maxis">Maxis</span><span class="tag richtofen">Richtofen</span></div>
+          <h3>EMP Grenades</h3>
+          <ul>
+            <li>Mystery Box only (follow the blue light)</li>
+            <li>Maxis: at least one player</li>
+            <li>Richtofen: preferably all four players</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="maxis richtofen lamppost green lamp teleport denizen depot diner" data-category="maxis">
+          <div class="ref-tags"><span class="tag shared">Final step</span></div>
+          <h3>Green lampposts (common picks)</h3>
+          <ul>
+            <li>Bus Depot exterior</li>
+            <li>Diner / shed side exterior</li>
+            <li>Along fog roads between major stops (Farm approaches, Power approaches, Town/bridge approaches)</li>
+            <li>They glow green when powered (main power on, or Turbine underneath when power is off)</li>
+          </ul>
+        </article>
+
+        <article class="ref-card" data-tags="shared pylon cornfield tower avogadro navcard" data-category="shared">
+          <div class="ref-tags"><span class="tag shared">Key landmark</span></div>
+          <h3>Cornfield pylon</h3>
+          <ul>
+            <li>Between Farm and Power Station</li>
+            <li>Left / tower side of the corn — not the Nacht maze on the right</li>
+            <li>Navcard Table, Avogadro EMP, Jet Gun break, and explosive kills all happen here</li>
+          </ul>
+        </article>
+      </div>
+      <div id="noResults" class="callout" hidden>
+        <strong>No matches</strong>
+        <p>Try a shorter word like “jet”, “nacht”, or “lamp”.</p>
+      </div>
+    </section>
+
+    <section class="section" id="troubleshoot">
+      <div class="section-header">
+        <h2>Troubleshooting &amp; tips</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>Maxis never speaks / power-off did nothing</summary>
+          <p>You must wait for Maxis to finish his first speech after turning power ON before you turn it OFF. Flipping too early can fail to register. Also confirm you are on Original difficulty.</p>
+        </details>
+        <details>
+          <summary>EMP killed Avogadro but the step failed</summary>
+          <p>Both Turbines must be active under the pylon. Avogadro must be under the tower. Your EMP may have disabled the Turbines — wait for them to recover or replace them, then try on a later Avogadro spawn.</p>
+        </details>
+        <details>
+          <summary>Richtofen is silent</summary>
+          <p>Only Samuel hears him. Have a teammate select Samuel. Others can still perform physical steps, but they will not get voice confirmation.</p>
+        </details>
+        <details>
+          <summary>Jet Gun step will not complete</summary>
+          <p>You must fully destroy the gun under the pylon by holding fire through overheat until parts scatter. Merely overheating briefly or swapping weapons does not count. If told the pylon needs to be hotter, rebuild and repeat.</p>
+        </details>
+        <details>
+          <summary>Explosive kills are not counting</summary>
+          <p>Stay under the pylon. Use the original Ray Gun or Mustang &amp; Sally. Do not rely on Ray Gun Mark II. Continue until Samuel hears the “too much power” style line.</p>
+        </details>
+        <details>
+          <summary>Final Richtofen EMPs failed</summary>
+          <p>Four different lampposts must be hit in a very short window. Use a countdown, do not double-target one lamp, and clear zombies first so nobody is interrupted mid-throw.</p>
+        </details>
+        <details>
+          <summary>How do Denizen teleports work?</summary>
+          <p>When a lamppost is green, let a Denizen jump on your head and stand under the lamp. It digs a portal. Dive in to warp to another lamp. Useful for map travel and for covering two EMP lamps with one player.</p>
+        </details>
+        <details>
+          <summary>How do I know we finished?</summary>
+          <p><strong>Maxis:</strong> orange energy to the pylon; TranZit icon outlined orange in the menu. <strong>Richtofen:</strong> blue energy / blue pylon effect; icon outlined blue. You also unlock the Tower of Babble achievement/trophy when eligible.</p>
+        </details>
+      </div>
+
+      <div class="panel" style="margin-top:1rem">
+        <p class="eyebrow">While-you-play habits</p>
+        <ul>
+          <li>Pin this page on your phone; use the bottom bar to jump to your next unchecked step.</li>
+          <li>Check off Setup first, then only your chosen path tab.</li>
+          <li>When someone asks “where is the gauge?”, open <a href="#locations">Locations</a> and type <em>gauge</em>.</li>
+          <li>Print view works (browser Print) if you want a paper checklist — path panels print best if you open the path you need first.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p><strong>Tower of Babble</strong> companion guide for Call of Duty: Black Ops II — TranZit.</p>
+      <p>Built for CoDEasterEggs: no prior map knowledge assumed. Progress is stored locally in your browser only.</p>
+    </footer>
+  </main>
+
+  <div class="sticky-bar" aria-live="polite">
+    <div class="sticky-inner">
+      <div>
+        <div class="sticky-label">Next unchecked step</div>
+        <p class="sticky-step" id="stickyStep">Start with Shared Setup</p>
+      </div>
+      <div class="sticky-controls">
+        <button type="button" class="btn" id="stickyPrev" title="Previous step">Prev</button>
+        <button type="button" class="btn btn-primary" id="stickyNext" title="Jump to next step">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
