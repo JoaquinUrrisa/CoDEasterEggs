@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Score Sheet — Tranzit EE Tests</title>
+  <link rel="stylesheet" href="assets/print.css" />
+</head>
+<body>
+  <div class="no-print">
+    <div class="print-bar">
+      <span>Score Sheet · CoD Difficulty Ranks</span>
+      <div>
+        <a href="index.html">Pack Home</a>
+        <a href="answer-key.html">Answer Key</a>
+        <button type="button" onclick="window.print()">Print Sheet</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="page">
+    <header class="masthead">
+      <div class="kicker">Black Ops II · Squad Results</div>
+      <h1>Tower of Babble Score Sheet</h1>
+      <p class="subtitle">
+        Convert each test score into a Call of Duty difficulty rank:
+        Recruit, Hardened, Veteran, or Realism.
+      </p>
+    </header>
+
+    <div class="badge-row">
+      <span class="badge">Percentage-based ranks</span>
+      <span class="badge">Works for every test tier</span>
+    </div>
+
+    <div class="meta-row">
+      <div class="field"><label>Host / Grader</label><div class="line"></div></div>
+      <div class="field"><label>Path Tonight</label><div class="line"></div></div>
+      <div class="field"><label>Session Date</label><div class="line"></div></div>
+    </div>
+
+    <h2>Rank Conversion</h2>
+    <p class="subtitle">Use percentage so Easy (/10), Medium (/12), and Hard (/15) share one ladder.</p>
+
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Score %</th>
+          <th>Easy /10</th>
+          <th>Medium /12</th>
+          <th>Hard /15</th>
+          <th>Lobby Role Suggestion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="rank recruit">Recruit</td>
+          <td>0–49%</td>
+          <td>0–4</td>
+          <td>0–5</td>
+          <td>0–7</td>
+          <td>Follow callouts. Hold a simple job (door, bus, one lamp post). No freelancing the power switch.</td>
+        </tr>
+        <tr>
+          <td class="rank hardened">Hardened</td>
+          <td>50–69%</td>
+          <td>5–6</td>
+          <td>6–8</td>
+          <td>8–10</td>
+          <td>Can handle parts runs and standard steps with a checklist nearby.</td>
+        </tr>
+        <tr>
+          <td class="rank veteran">Veteran</td>
+          <td>70–89%</td>
+          <td>7–8</td>
+          <td>9–10</td>
+          <td>11–13</td>
+          <td>Trusted on key steps (Jet Gun break / Avogadro EMP / countdown calls).</td>
+        </tr>
+        <tr>
+          <td class="rank realism">Realism</td>
+          <td>90–100%</td>
+          <td>9–10</td>
+          <td>11–12</td>
+          <td>14–15</td>
+          <td>Squad lead candidate. Owns the order, fail-states, and final timing.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Player Results</h2>
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Side</th>
+          <th>Test Level</th>
+          <th>Raw Score</th>
+          <th>%</th>
+          <th>CoD Rank</th>
+          <th>Assigned Job In-Game</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="line"></div></td>
+          <td>Richtofen / Maxis</td>
+          <td>E / M / H</td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+        </tr>
+        <tr>
+          <td><div class="line"></div></td>
+          <td>Richtofen / Maxis</td>
+          <td>E / M / H</td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+        </tr>
+        <tr>
+          <td><div class="line"></div></td>
+          <td>Richtofen / Maxis</td>
+          <td>E / M / H</td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+        </tr>
+        <tr>
+          <td><div class="line"></div></td>
+          <td>Richtofen / Maxis</td>
+          <td>E / M / H</td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+          <td><div class="line"></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Quick Percent Math</h2>
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Formula</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Easy</td>
+          <td>(score ÷ 10) × 100</td>
+          <td>7/10 = 70% → Veteran</td>
+        </tr>
+        <tr>
+          <td>Medium</td>
+          <td>(score ÷ 12) × 100</td>
+          <td>8/12 ≈ 67% → Hardened</td>
+        </tr>
+        <tr>
+          <td>Hard</td>
+          <td>(score ÷ 15) × 100</td>
+          <td>14/15 ≈ 93% → Realism</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Squad Clearance Checklist</h2>
+    <div class="q">
+      <ul class="choices">
+        <li><span class="bubble"></span> Everyone agrees on <strong>Richtofen</strong> or <strong>Maxis</strong> before round 1</li>
+        <li><span class="bubble"></span> Lobby is on <strong>Original</strong> difficulty</li>
+        <li><span class="bubble"></span> At least one Realism/Veteran player owns the step order</li>
+        <li><span class="bubble"></span> Recruit players have one clear job written above</li>
+        <li><span class="bubble"></span> Answer key is off the table</li>
+        <li><span class="bubble"></span> EMP plan / Turbine plan is spoken out loud once</li>
+      </ul>
+    </div>
+
+    <h2>Optional House Rules</h2>
+    <div class="instructions">
+      <strong>Lowest rank picks bus music complaints only.</strong>
+      Lowest scorer buys the first box spin (honor system).
+      Any Realism player who downs to lava before power owes the squad a Turbine ferry.
+      If two players tie for Realism, they split Samuel duty / countdown duty.
+    </div>
+
+    <div class="footer-note">
+      <span>CoDEasterEggs · Tranzit Score Sheet</span>
+      <span>Recruit · Hardened · Veteran · Realism</span>
+    </div>
+  </main>
+</body>
+</html>

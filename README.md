@@ -60,6 +60,14 @@ As the project grows, guides can be organized by game, map, and Easter Egg name.
     - shadows-of-evil/
       - pack-a-punch-easter-egg.md
 
+## Printable Quizzes
+
+Squad readiness tests live under `quizzes/`. Start here:
+
+- [Tranzit — Tower of Babble readiness pack](quizzes/tranzit-tower-of-babble/index.html)
+
+Includes Richtofen and Maxis tests (easy / medium / hard), a host answer key, and a score sheet that maps results to Recruit, Hardened, Veteran, or Realism.
+
 ## Contribution Notes
 
 If you want to contribute, focus on making guides that are accurate, practical, and easy to follow while playing. The best guides are the ones that help someone complete the Easter Egg without getting stuck.
