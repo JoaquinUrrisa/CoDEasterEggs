@@ -572,6 +572,46 @@ input {
   margin-top: 0.35rem;
 }
 
+/* Guide figures / location diagrams */
+
+.guide-figure {
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #0c100e;
+}
+
+.guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.guide-figure figcaption {
+  margin: 0;
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.4;
+  background: var(--bg-elevated);
+}
+
+.guide-figure.compact {
+  margin: 0.65rem 0 0.85rem;
+}
+
+.guide-figure.compact figcaption {
+  display: none;
+}
+
+.ref-card .guide-figure {
+  margin-top: 0.55rem;
+}
+
 .checklist {
   list-style: none;
   padding: 0;

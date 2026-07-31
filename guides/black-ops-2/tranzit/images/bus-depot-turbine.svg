@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="tTitle tDesc">
+  <title id="tTitle">Bus Depot Turbine build location</title>
+  <desc id="tDesc">Find all three Turbine parts inside the Bus Depot starting area and build at the workbench.</desc>
+  <rect width="720" height="360" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#e8a23a" font-family="Arial, sans-serif" font-size="18" font-weight="700">BUS DEPOT  TURBINE</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">All 3 parts spawn inside the starting depot. Build, place to open doors, then pick it back up.</text>
+
+  <!-- building outline -->
+  <rect x="80" y="90" width="420" height="220" fill="#1c2621" stroke="#45554c" stroke-width="3" rx="6"/>
+  <text x="96" y="114" fill="#6f8077" font-family="Arial, sans-serif" font-size="11" letter-spacing="0.12em">STARTING ROOM / INTERIOR</text>
+
+  <!-- parts -->
+  <g font-family="Arial, sans-serif">
+    <circle cx="160" cy="180" r="22" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="152" y="185" fill="#e8a23a" font-size="14" font-weight="700">1</text>
+    <text x="192" y="176" fill="#e8efe9" font-size="13" font-weight="700">Fan / blade</text>
+    <text x="192" y="194" fill="#9aaba1" font-size="11">Near barriers / corners</text>
+
+    <circle cx="160" cy="250" r="22" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="152" y="255" fill="#e8a23a" font-size="14" font-weight="700">2</text>
+    <text x="192" y="246" fill="#e8efe9" font-size="13" font-weight="700">Mannequin / body</text>
+    <text x="192" y="264" fill="#9aaba1" font-size="11">Inside depot rooms</text>
+
+    <circle cx="340" cy="180" r="22" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="332" y="185" fill="#e8a23a" font-size="14" font-weight="700">3</text>
+    <text x="372" y="176" fill="#e8efe9" font-size="13" font-weight="700">Tail / vane</text>
+    <text x="372" y="194" fill="#9aaba1" font-size="11">Same starting area</text>
+  </g>
+
+  <!-- workbench -->
+  <rect x="300" y="230" width="160" height="55" fill="#e8a23a" rx="6"/>
+  <text x="325" y="255" fill="#0f1412" font-family="Arial, sans-serif" font-size="14" font-weight="700">WORKBENCH</text>
+  <text x="318" y="275" fill="#0f1412" font-family="Arial, sans-serif" font-size="11">Build Turbine here</text>
+
+  <!-- door tip -->
+  <rect x="540" y="110" width="150" height="180" fill="#1c2621" stroke="#4ecdc4" stroke-width="2" rx="8"/>
+  <text x="560" y="140" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="13" font-weight="700">After build</text>
+  <text x="556" y="170" fill="#e8efe9" font-family="Arial, sans-serif" font-size="12">Place Turbine</text>
+  <text x="556" y="188" fill="#e8efe9" font-family="Arial, sans-serif" font-size="12">next to the</text>
+  <text x="556" y="206" fill="#e8efe9" font-family="Arial, sans-serif" font-size="12">powered door</text>
+  <text x="556" y="240" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Opens exits without</text>
+  <text x="556" y="256" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">buying the door.</text>
+  <text x="556" y="280" fill="#e8a23a" font-family="Arial, sans-serif" font-size="12" font-weight="700">Pick it up again!</text>
+</svg>

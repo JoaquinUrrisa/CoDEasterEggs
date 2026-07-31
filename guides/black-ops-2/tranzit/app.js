@@ -1,5 +1,5 @@
 (() => {
-  const STORAGE_KEY = "tranzit-tower-of-babble-progress-v1";
+  const STORAGE_KEY = "tranzit-tower-of-babble-progress-v2";
 
   const state = {
     path: "maxis",
@@ -38,10 +38,8 @@
   }
 
   function relevantSteps() {
-    const shared = [...document.querySelectorAll('.step-list[data-path="shared"] .step')];
     const pathPanel = document.getElementById(`panel-${state.path}`);
-    const pathSteps = pathPanel ? [...pathPanel.querySelectorAll(".step")] : [];
-    return [...shared, ...pathSteps];
+    return pathPanel ? [...pathPanel.querySelectorAll(".step")] : [];
   }
 
   function applyChecks() {
