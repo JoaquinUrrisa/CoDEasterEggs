@@ -56,9 +56,24 @@ route with the Lightning jump points, soul chest locations, the Crazy Place, the
 G-Strike tablet loop, the surface-task locations and the staff upgrade flow. They label things a
 screenshot cannot, and they show relationships rather than one camera angle.
 
-**Screenshots** come from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Origins) and are
-credited on the page. They show you what a thing actually looks like in the game, which matters when
-you are hunting for a specific pile of rubble.
+**Screenshots** come from two places, and each figure says which:
+
+- The [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Origins) (CC BY-SA), for single subjects
+  — a part on the ground, a robot, the red button.
+- [Silentbrother's Steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=315184862)
+  (*ORIGINS — BLACK OPS 2 ZOMBIES, Guía completa*), for ten multi-panel composites showing **where the
+  records and parts spawn** — the thing a single screenshot cannot show — plus his annotated shot of
+  the Crazy Place keyboard with the bottom row numbered 1–7, which is the clearest version of that
+  puzzle anywhere.
+
+Silentbrother's images are hotlinked from Steam and credited with a link on every figure. They are
+his work, not CC-licensed, so if he ever asks for them to come down, remove those ten `<figure>`
+blocks — searching the file for `steamusercontent` finds all of them.
+
+Note that a few images in his guide are ones *he* took from elsewhere — he credits
+es.callofduty.wikia.com, comunidadzombies.com and a YouTube user for the ice, wind and lightning
+puzzle charts, and one screenshot carries another site's watermark. Those are deliberately not used
+here; the equivalents come from the wiki instead.
 
 Five figures have both, and carry a **Diagram / Photo** switch: the dig site, the Crazy Place, the
 tank route, the surface tasks and the G-Strike loop. The **Figures** control in the page header flips
