@@ -107,16 +107,20 @@ Done correctly, corpses burst into black smoke that fills the four cauldrons nea
 
 ### B — Church torches puzzle
 
-The church **basement** has **seven torches**, each with a number 1–7 written under it. The "**4**" is
+The church **basement** has **seven torches**, each with a number chalked under it. The "**4**" is
 a **bloodstain**, not chalk — that trips people up.
+
+> ⚠️ **The numbers are not 1–7.** Plenty of guides say they are. They aren't. The torches carry
+> specific values — `3` `4` `5` `6` `7` `9` `11` — scattered along the basement walls. Read the
+> number under the torch; don't count torches left to right.
 
 **Upstairs, on the far wall**, there is a set of symbols; **four of them are lit**. Those four symbols
 are the four torch numbers you must light.
 
 **Decoding (ternary / base 3):**
 - Each symbol is columns of circles. **Filled circle = 1, outline = 0, two filled circles in a column = 2.**
-- Left column = the **3s** place, right column = the **1s** place.
-- So: `1|1` = 4, `1|2` = 5, `2|0` = 6, `2|1` = 7. Single-column symbols are just 1, 2 or 3.
+- Rightmost column = the **1s**, next left = the **3s**, next = the **9s**.
+- So: `1|1` = 4, `2|0` = 6, `1|0|0` = 9, `1|0|2` = 11.
 - **4 is always one of the four numbers.**
 
 ![](https://static.wikia.nocookie.net/callofduty/images/d/d5/Fire_Staff_Challenge_Symbols_Key_Origins_BOII.png)
