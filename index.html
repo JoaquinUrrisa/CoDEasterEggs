@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Clear, beginner-friendly interactive guides for Call of Duty Zombies Easter Eggs. Pick a map and follow along while you play." />
+  <meta name="theme-color" content="#0f1412" />
+  <title>CoDEasterEggs — Zombies Easter Egg Guides</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="masthead">
+      <p class="kicker">Call of Duty · Zombies</p>
+      <h1>Easter Egg Guides</h1>
+      <p>Step-by-step walkthroughs you can actually follow while you are playing. No prior knowledge
+      of the map assumed, no scrolling through a wall of text to find the one thing you forgot.</p>
+    </header>
+
+    <p class="pick-line">Pick a map</p>
+
+    <div class="guide-grid">
+      <a class="guide-card" href="guides/black-ops-2/origins/">
+        <div class="cover">
+          <img src="assets/cover-origins.svg" alt="Diagram of the Origins excavation site ringed by generators, with four elemental markers and three robot lanes" width="480" height="200" />
+        </div>
+        <div class="guide-body">
+          <span class="guide-game">Black Ops II</span>
+          <h2>Little Lost Girl</h2>
+          <p class="guide-map">Origins</p>
+          <p class="blurb">Build and upgrade all four elemental staffs, break the seal, survive ten
+          Panzersoldats and free Samantha. Split across four players so nothing waits its turn.</p>
+          <div class="facts">
+            <span class="fact">8 steps</span>
+            <span class="fact">4 players</span>
+            <span class="fact">Long</span>
+            <span class="fact">Role split</span>
+          </div>
+          <p class="open-line">Open the guide &rarr;</p>
+        </div>
+      </a>
+
+      <a class="guide-card" href="guides/black-ops-2/tranzit/">
+        <div class="cover">
+          <img src="assets/cover-tranzit.svg" alt="Diagram of the TranZit bus route looping between five stops with lamp posts along the way" width="480" height="200" />
+        </div>
+        <div class="guide-body">
+          <span class="guide-game">Black Ops II</span>
+          <h2>Tower of Babble</h2>
+          <p class="guide-map">TranZit</p>
+          <p class="blurb">The Maxis and Richtofen paths side by side, with the Jet Gun, the Navcard
+          Table, the pylon and the Avogadro, plus a searchable part-location reference.</p>
+          <div class="facts">
+            <span class="fact">2 paths</span>
+            <span class="fact">1&ndash;4 players</span>
+            <span class="fact">Medium</span>
+            <span class="fact">Checklists</span>
+          </div>
+          <p class="open-line">Open the guide &rarr;</p>
+        </div>
+      </a>
+
+      <div class="soon">
+        <strong>More maps</strong>
+        <p>Mob of the Dead, Buried, Der Eisendrache and the rest are open for contribution. The format
+        is a self-contained folder under <code>guides/&lt;game&gt;/&lt;map&gt;/</code>.</p>
+      </div>
+    </div>
+
+    <div class="about">
+      <section>
+        <h3>How these guides work</h3>
+        <ul>
+          <li>Written for someone who has never run the Easter Egg before</li>
+          <li>Numbered steps in the order you actually do them</li>
+          <li>Labeled diagrams instead of vague landmark descriptions</li>
+          <li>Checklists that remember where you got to, in your own browser</li>
+          <li>Warnings on the mistakes that quietly end a run</li>
+          <li>Built to be read on a phone with one hand</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Contributing</h3>
+        <p>Each guide lives in its own folder with an <code>index.html</code>, a stylesheet, a small
+        script and hand-drawn SVG diagrams. Nothing is built or bundled, so you can open the file
+        directly in a browser and start editing.</p>
+        <p>Run the whole site locally with
+        <code>python3 -m http.server 8080</code> from the repository root.</p>
+        <p><a href="https://github.com/JoaquinUrrisa/CoDEasterEggs">Source on GitHub</a></p>
+      </section>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Fan-made reference. Call of Duty and Zombies are trademarks of Activision.</p>
+  </footer>
+</body>
+</html>

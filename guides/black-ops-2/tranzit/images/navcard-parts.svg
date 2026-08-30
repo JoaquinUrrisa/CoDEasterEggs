@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-labelledby="nTitle nDesc">
+  <title id="nTitle">Navcard Table part locations</title>
+  <desc id="nDesc">Four Navcard Table parts and where they spawn across TranZit; carry each to the cornfield pylon.</desc>
+  <rect width="720" height="400" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#e8a23a" font-family="Arial, sans-serif" font-size="18" font-weight="700">NAVCARD TABLE PARTS</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Carry one part at a time to the workbench under the cornfield pylon. Skip if the table is already built.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="24" y="80" width="330" height="140" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="40" y="108" fill="#e8a23a" font-size="14" font-weight="700">1 · METEOR (115 rock)</text>
+    <text x="40" y="132" fill="#e8efe9" font-size="13">Bus Depot  rear / Mystery Box side</text>
+    <text x="40" y="154" fill="#9aaba1" font-size="12">Crevice / zombie barrier behind depot.</text>
+    <text x="40" y="178" fill="#6f8077" font-size="11">Also grab the Navcard behind a dumpster.</text>
+
+    <rect x="366" y="80" width="330" height="140" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="382" y="108" fill="#e8a23a" font-size="14" font-weight="700">2 · WOODEN BOARD</text>
+    <text x="382" y="132" fill="#e8efe9" font-size="13">A: Tunnel by M16 wall-buy</text>
+    <text x="382" y="154" fill="#e8efe9" font-size="13">B: Power Station walkway under Tombstone</text>
+    <text x="382" y="178" fill="#6f8077" font-size="11">Only one of these two spawns.</text>
+
+    <rect x="24" y="236" width="330" height="140" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="40" y="264" fill="#e8a23a" font-size="14" font-weight="700">3 · RADIO</text>
+    <text x="40" y="288" fill="#e8efe9" font-size="13">A: Diner garage  top of locker</text>
+    <text x="40" y="310" fill="#e8efe9" font-size="13">B: Nacht der Untoten  on a table</text>
+    <text x="40" y="334" fill="#6f8077" font-size="11">Only one of these two spawns.</text>
+
+    <rect x="366" y="236" width="330" height="140" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="382" y="264" fill="#e8a23a" font-size="14" font-weight="700">4 · ELECTRICAL BOX</text>
+    <text x="382" y="288" fill="#e8efe9" font-size="13">A: Farm house  left of fridge</text>
+    <text x="382" y="310" fill="#e8efe9" font-size="13">B: Town  dumpster by upper box</text>
+    <text x="382" y="334" fill="#6f8077" font-size="11">Only one of these two spawns.</text>
+  </g>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" role="img" aria-labelledby="jTitle jDesc">
+  <title id="jTitle">Jet Gun part locations</title>
+  <desc id="jDesc">Four Jet Gun parts: engine in tunnel, wires at Power Station, pressure gauge at Hunter Cabin, handle at Nacht; build at Town bar.</desc>
+  <rect width="720" height="400" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">JET GUN PARTS ’ TOWN BAR</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">One part per trip. Build at the Town bar workbench near Stamin-Up.</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="24" y="80" width="330" height="130" fill="#1c2621" stroke="#5eb8ff" stroke-width="2" rx="8"/>
+    <text x="40" y="108" fill="#5eb8ff" font-size="14" font-weight="700">ENGINE</text>
+    <text x="40" y="132" fill="#e8efe9" font-size="13">Tunnel Depot ’ Diner</text>
+    <text x="40" y="154" fill="#9aaba1" font-size="12">Near M16, between cars, or</text>
+    <text x="40" y="172" fill="#9aaba1" font-size="12">garage-door corner.</text>
+
+    <rect x="366" y="80" width="330" height="130" fill="#1c2621" stroke="#5eb8ff" stroke-width="2" rx="8"/>
+    <text x="382" y="108" fill="#5eb8ff" font-size="14" font-weight="700">WIRES</text>
+    <text x="382" y="132" fill="#e8efe9" font-size="13">Power Station (after power ON)</text>
+    <text x="382" y="154" fill="#9aaba1" font-size="12">Lava / lower catwalk: barrels,</text>
+    <text x="382" y="172" fill="#9aaba1" font-size="12">ledges, broken electrical box.</text>
+
+    <rect x="24" y="226" width="330" height="130" fill="#1c2621" stroke="#5eb8ff" stroke-width="2" rx="8"/>
+    <text x="40" y="254" fill="#5eb8ff" font-size="14" font-weight="700">PRESSURE GAUGE</text>
+    <text x="40" y="278" fill="#e8efe9" font-size="13">Hunters Cabin (fog stretch)</text>
+    <text x="40" y="300" fill="#9aaba1" font-size="12">Fireplace, metal bed frame,</text>
+    <text x="40" y="318" fill="#9aaba1" font-size="12">or wooden barrel.</text>
+
+    <rect x="366" y="226" width="330" height="130" fill="#1c2621" stroke="#5eb8ff" stroke-width="2" rx="8"/>
+    <text x="382" y="254" fill="#5eb8ff" font-size="14" font-weight="700">HANDLE / HANDBRAKE</text>
+    <text x="382" y="278" fill="#e8efe9" font-size="13">Nacht der Untoten (corn RIGHT)</text>
+    <text x="382" y="300" fill="#9aaba1" font-size="12">Stairs/desk, cabinets, shelf,</text>
+    <text x="382" y="318" fill="#9aaba1" font-size="12">or near a lamp.</text>
+  </g>
+</svg>

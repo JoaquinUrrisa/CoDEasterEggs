@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="lTitle lDesc">
+  <title id="lTitle">Green lamppost locations</title>
+  <desc id="lDesc">Easiest green lampposts for final steps are outside Bus Depot and outside the Diner; more exist along fog roads.</desc>
+  <rect width="720" height="360" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="18" font-weight="700">GREEN LAMPPOSTS  EASY PICKS</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">They glow green when powered. Maxis: Turbine under 2 lamps. Richtofen: EMP 4 different lamps at once.</text>
+
+  <!-- depot lamp -->
+  <g transform="translate(70,90)">
+    <rect width="250" height="220" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="20" y="30" fill="#e8efe9" font-family="Arial, sans-serif" font-size="14" font-weight="700">BUS DEPOT LAMP</text>
+    <rect x="30" y="55" width="120" height="70" fill="#24302a" rx="4"/>
+    <text x="55" y="95" fill="#6f8077" font-family="Arial, sans-serif" font-size="11">DEPOT</text>
+    <!-- lamp -->
+    <line x1="180" y1="180" x2="180" y2="90" stroke="#9aaba1" stroke-width="4"/>
+    <circle cx="180" cy="78" r="18" fill="#6fbf7a" opacity="0.9"/>
+    <circle cx="180" cy="78" r="28" fill="#6fbf7a" opacity="0.2"/>
+    <text x="20" y="200" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Outside the depot exterior,</text>
+    <text x="20" y="218" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">street-side green lamppost.</text>
+  </g>
+
+  <!-- diner lamp -->
+  <g transform="translate(400,90)">
+    <rect width="250" height="220" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+    <text x="20" y="30" fill="#e8efe9" font-family="Arial, sans-serif" font-size="14" font-weight="700">DINER LAMP</text>
+    <rect x="40" y="55" width="100" height="60" fill="#24302a" rx="4"/>
+    <text x="65" y="90" fill="#6f8077" font-family="Arial, sans-serif" font-size="11">DINER</text>
+    <rect x="150" y="70" width="50" height="45" fill="#24302a" rx="3"/>
+    <text x="158" y="96" fill="#6f8077" font-family="Arial, sans-serif" font-size="10">shed</text>
+    <line x1="200" y1="180" x2="200" y2="100" stroke="#9aaba1" stroke-width="4"/>
+    <circle cx="200" cy="88" r="18" fill="#6fbf7a" opacity="0.9"/>
+    <circle cx="200" cy="88" r="28" fill="#6fbf7a" opacity="0.2"/>
+    <text x="20" y="200" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Outside near diner / shed</text>
+    <text x="20" y="218" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">area  also street-side.</text>
+  </g>
+</svg>

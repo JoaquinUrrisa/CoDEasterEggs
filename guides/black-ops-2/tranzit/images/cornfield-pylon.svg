@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" role="img" aria-labelledby="pTitle pDesc">
+  <title id="pTitle">Cornfield pylon landmark</title>
+  <desc id="pDesc">The Easter Egg pylon is on the left side of the cornfield between Farm and Power Station. Nacht is on the right paths.</desc>
+  <rect width="720" height="380" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="18" font-weight="700">CORNFIELD  FIND THE PYLON</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Between Farm and Power Station. Left / road side = pylon. Right maze paths = Nacht der Untoten.</text>
+
+  <!-- farm / power labels -->
+  <rect x="40" y="90" width="100" height="44" fill="#24302a" rx="6"/>
+  <text x="68" y="117" fill="#e8efe9" font-family="Arial, sans-serif" font-size="13" font-weight="700">FARM</text>
+  <rect x="580" y="90" width="110" height="44" fill="#24302a" rx="6"/>
+  <text x="598" y="117" fill="#e8efe9" font-family="Arial, sans-serif" font-size="13" font-weight="700">POWER</text>
+
+  <!-- road -->
+  <rect x="140" y="105" width="440" height="14" fill="#33403a" rx="4"/>
+  <text x="320" y="100" fill="#6f8077" font-family="Arial, sans-serif" font-size="11">BUS ROAD</text>
+
+  <!-- cornfield -->
+  <rect x="120" y="150" width="480" height="190" fill="#1c2621" stroke="#33403a" stroke-width="2" rx="8"/>
+  <!-- corn texture -->
+  <g stroke="#2a3a32" stroke-width="2">
+    <path d="M150,170 V320 M180,165 V325 M210,175 V318 M240,168 V322 M270,172 V320"/>
+    <path d="M450,170 V320 M480,165 V325 M510,175 V318 M540,168 V322 M570,172 V320"/>
+  </g>
+
+  <!-- LEFT pylon -->
+  <g transform="translate(210,170)">
+    <polygon points="40,0 55,0 70,140 25,140" fill="#45554c"/>
+    <line x1="10" y1="30" x2="85" y2="30" stroke="#e8a23a" stroke-width="3"/>
+    <line x1="15" y1="55" x2="80" y2="55" stroke="#e8a23a" stroke-width="2"/>
+    <line x1="20" y1="80" x2="75" y2="80" stroke="#e8a23a" stroke-width="2"/>
+    <rect x="20" y="125" width="55" height="18" fill="#e8a23a" rx="3"/>
+    <text x="28" y="138" fill="#0f1412" font-family="Arial, sans-serif" font-size="10" font-weight="700">TABLE</text>
+  </g>
+  <text x="175" y="345" fill="#e8a23a" font-family="Arial, sans-serif" font-size="14" font-weight="700">ê LEFT: PYLON</text>
+  <text x="155" y="363" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Navcard Table ∑ Avogadro ∑ Jet Gun break</text>
+
+  <!-- RIGHT nacht -->
+  <rect x="470" y="200" width="90" height="70" fill="#24302a" stroke="#5eb8ff" stroke-width="2" rx="4"/>
+  <text x="488" y="230" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="12" font-weight="700">NACHT</text>
+  <text x="482" y="248" fill="#9aaba1" font-family="Arial, sans-serif" font-size="10">Jet Handle</text>
+  <text x="455" y="345" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="14" font-weight="700">RIGHT: NACHT í</text>
+  <text x="450" y="363" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Follow corn paths / slim trail</text>
+</svg>

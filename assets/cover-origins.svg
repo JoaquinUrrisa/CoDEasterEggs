@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-labelledby="coT coD">
+  <title id="coT">Origins excavation site</title>
+  <desc id="coD">Abstract diagram of the Origins dig site: a central mound ringed by generators, with four elemental markers and three giant robot lanes.</desc>
+  <defs>
+    <linearGradient id="coBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2621"/><stop offset="100%" stop-color="#0f1412"/>
+    </linearGradient>
+    <radialGradient id="coGlow" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#e8a23a" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#e8a23a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="480" height="200" fill="url(#coBg)"/>
+  <g stroke-dasharray="3 7" stroke-width="1.5" opacity="0.5" fill="none">
+    <path d="M96 0 V200" stroke="#5eb8ff"/><path d="M240 0 V200" stroke="#e8c33a"/><path d="M384 0 V200" stroke="#b184f0"/>
+  </g>
+  <circle cx="240" cy="100" r="82" fill="url(#coGlow)"/>
+  <circle cx="240" cy="100" r="52" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+  <circle cx="240" cy="100" r="32" fill="#1c2621" stroke="#45554c" stroke-width="1.5"/>
+  <circle cx="240" cy="100" r="13" fill="#e8a23a" opacity="0.6"/>
+  <g stroke="#45554c" stroke-width="1.5">
+    <path d="M240 48 V64M240 136 V152M188 100 H204M276 100 H292"/>
+  </g>
+  <g fill="#0f1412" stroke-width="2.5">
+    <circle cx="240" cy="26" r="9" stroke="#e8705a"/>
+    <circle cx="314" cy="100" r="9" stroke="#5eb8ff"/>
+    <circle cx="240" cy="174" r="9" stroke="#b184f0"/>
+    <circle cx="166" cy="100" r="9" stroke="#e8c33a"/>
+  </g>
+  <g fill="#0f1412" stroke="#e8a23a" stroke-width="1.5">
+    <circle cx="60" cy="46" r="7"/><circle cx="60" cy="154" r="7"/>
+    <circle cx="420" cy="46" r="7"/><circle cx="420" cy="154" r="7"/>
+    <circle cx="130" cy="100" r="7"/><circle cx="350" cy="100" r="7"/>
+  </g>
+</svg>

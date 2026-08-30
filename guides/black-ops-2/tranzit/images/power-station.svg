@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" role="img" aria-labelledby="pwTitle pwDesc">
+  <title id="pwTitle">Power Station hatch entrance</title>
+  <desc id="pwDesc">Buy the outhouse hatch at Power Station, drop into the lab, build the switch from three parts, then flip it.</desc>
+  <rect width="720" height="340" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#e8a23a" font-family="Arial, sans-serif" font-size="18" font-weight="700">POWER STATION  LAB ENTRANCE</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Bus stop 4. Buy the outhouse / hatch door, drop into the underground white lab.</text>
+
+  <!-- surface -->
+  <rect x="60" y="90" width="260" height="200" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+  <text x="80" y="118" fill="#6f8077" font-family="Arial, sans-serif" font-size="11" letter-spacing="0.1em">SURFACE</text>
+  <rect x="130" y="150" width="100" height="110" fill="#24302a" stroke="#e8a23a" stroke-width="3" rx="6"/>
+  <text x="148" y="190" fill="#e8a23a" font-family="Arial, sans-serif" font-size="13" font-weight="700">OUTHOUSE</text>
+  <text x="158" y="210" fill="#e8efe9" font-family="Arial, sans-serif" font-size="12">/ HATCH</text>
+  <text x="145" y="235" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Buy this door</text>
+  <path d="M180,260 L180,280 L200,270 L180,290" fill="none" stroke="#4ecdc4" stroke-width="3"/>
+  <text x="210" y="290" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="12" font-weight="700">DROP DOWN</text>
+
+  <!-- arrow -->
+  <path d="M340,190 H390" stroke="#4ecdc4" stroke-width="3" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#4ecdc4"/>
+    </marker>
+  </defs>
+
+  <!-- lab -->
+  <rect x="410" y="90" width="260" height="200" fill="#1c2621" stroke="#4ecdc4" stroke-width="2" rx="8"/>
+  <text x="430" y="118" fill="#4ecdc4" font-family="Arial, sans-serif" font-size="11" letter-spacing="0.1em">UNDERGROUND LAB</text>
+  <g font-family="Arial, sans-serif" fill="#e8efe9" font-size="12">
+    <circle cx="450" cy="160" r="10" fill="#e8a23a"/><text x="445" y="164" fill="#0f1412" font-size="10" font-weight="700">A</text>
+    <text x="468" y="164">Zombie hand / arm</text>
+    <circle cx="450" cy="195" r="10" fill="#e8a23a"/><text x="445" y="199" fill="#0f1412" font-size="10" font-weight="700">B</text>
+    <text x="468" y="199">Lever / handle</text>
+    <circle cx="450" cy="230" r="10" fill="#e8a23a"/><text x="445" y="234" fill="#0f1412" font-size="10" font-weight="700">C</text>
+    <text x="468" y="234">Circuit / panel</text>
+  </g>
+  <rect x="520" y="250" width="120" height="28" fill="#e8a23a" rx="4"/>
+  <text x="538" y="269" fill="#0f1412" font-family="Arial, sans-serif" font-size="12" font-weight="700">BUILD + FLIP</text>
+</svg>

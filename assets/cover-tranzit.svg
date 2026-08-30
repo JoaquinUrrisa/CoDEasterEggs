@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" role="img" aria-labelledby="ctT ctD">
+  <title id="ctT">TranZit bus loop</title>
+  <desc id="ctD">Abstract diagram of the TranZit bus route looping between five stops, with lamp posts along the way.</desc>
+  <defs>
+    <linearGradient id="ctBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c2621"/><stop offset="100%" stop-color="#0f1412"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="200" fill="url(#ctBg)"/>
+  <g stroke="#ffffff" stroke-opacity="0.03"><path d="M0 66H480M0 133H480M160 0V200M320 0V200"/></g>
+  <path d="M74 138 C 74 66, 150 44, 240 44 S 406 66, 406 138 C 406 176, 320 178, 240 178 S 74 176, 74 138 Z"
+        fill="none" stroke="#e8a23a" stroke-width="2.5" stroke-dasharray="12 8" opacity="0.85"/>
+  <g fill="#0f1412" stroke="#e8a23a" stroke-width="2">
+    <circle cx="74" cy="132" r="11"/><circle cx="240" cy="44" r="11"/>
+    <circle cx="406" cy="132" r="11"/><circle cx="160" cy="178" r="11"/><circle cx="330" cy="178" r="11"/>
+  </g>
+  <g fill="#4ecdc4" opacity="0.9">
+    <rect x="146" y="60" width="3" height="26" rx="1.5"/><circle cx="147.5" cy="56" r="4"/>
+    <rect x="332" y="60" width="3" height="26" rx="1.5"/><circle cx="333.5" cy="56" r="4"/>
+    <rect x="240" y="122" width="3" height="26" rx="1.5"/><circle cx="241.5" cy="118" r="4"/>
+  </g>
+  <rect x="196" y="96" width="88" height="34" rx="7" fill="#24302a" stroke="#45554c" stroke-width="1.5"/>
+  <text x="240" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#e8a23a">BUS</text>
+</svg>

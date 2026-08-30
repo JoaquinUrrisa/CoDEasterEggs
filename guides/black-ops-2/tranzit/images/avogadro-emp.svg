@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="aTitle aDesc">
+  <title id="aTitle">Maxis Avogadro EMP setup under the pylon</title>
+  <desc id="aDesc">Place two Turbines on one side under the pylon, lure Avogadro to the opposite side, then EMP Avogadro without hitting the Turbines.</desc>
+  <rect width="720" height="360" fill="#121916" rx="12"/>
+  <text x="24" y="34" fill="#e8a23a" font-family="Arial, sans-serif" font-size="18" font-weight="700">MAXIS  AVOGADRO UNDER THE PYLON</text>
+  <text x="24" y="56" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">Keep Turbines alive. EMP the Avogadro  not the Turbines.</text>
+
+  <!-- pylon top-down-ish -->
+  <rect x="260" y="90" width="200" height="200" fill="#1c2621" stroke="#45554c" stroke-width="2" rx="8"/>
+  <text x="318" y="120" fill="#6f8077" font-family="Arial, sans-serif" font-size="11">UNDER PYLON</text>
+  <rect x="330" y="145" width="60" height="40" fill="#33403a" rx="4"/>
+  <text x="338" y="170" fill="#e8efe9" font-family="Arial, sans-serif" font-size="11">TABLE</text>
+
+  <!-- turbines left -->
+  <circle cx="290" cy="240" r="22" fill="#e8a23a"/>
+  <text x="282" y="245" fill="#0f1412" font-family="Arial, sans-serif" font-size="12" font-weight="700">T</text>
+  <circle cx="340" cy="255" r="22" fill="#e8a23a"/>
+  <text x="332" y="260" fill="#0f1412" font-family="Arial, sans-serif" font-size="12" font-weight="700">T</text>
+  <text x="250" y="310" fill="#e8a23a" font-family="Arial, sans-serif" font-size="12" font-weight="700">2 Turbines (this side)</text>
+
+  <!-- avogadro right -->
+  <circle cx="430" cy="200" r="28" fill="none" stroke="#5eb8ff" stroke-width="3"/>
+  <circle cx="430" cy="200" r="14" fill="#5eb8ff" opacity="0.5"/>
+  <text x="400" y="250" fill="#5eb8ff" font-family="Arial, sans-serif" font-size="12" font-weight="700">AVOGADRO</text>
+  <text x="395" y="268" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Pull to opposite side</text>
+
+  <!-- emp -->
+  <path d="M500,160 Q470,180 445,195" fill="none" stroke="#e86a5a" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="508" y="155" fill="#e86a5a" font-family="Arial, sans-serif" font-size="13" font-weight="700">EMP ’</text>
+  <text x="508" y="175" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Throw at Avogadro</text>
+  <text x="508" y="193" fill="#9aaba1" font-family="Arial, sans-serif" font-size="11">Avoid Turbines</text>
+
+  <rect x="40" y="100" width="180" height="180" fill="#1c2621" stroke="#33403a" stroke-width="2" rx="8"/>
+  <text x="55" y="130" fill="#e8efe9" font-family="Arial, sans-serif" font-size="13" font-weight="700">Checklist</text>
+  <text x="55" y="160" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">1. Storm overhead</text>
+  <text x="55" y="185" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">2. End the round</text>
+  <text x="55" y="210" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">3. Both Turbines up</text>
+  <text x="55" y="235" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">4. Lure under tower</text>
+  <text x="55" y="260" fill="#9aaba1" font-family="Arial, sans-serif" font-size="12">5. EMP Avogadro</text>
+</svg>

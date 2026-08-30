@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-labelledby="cpT cpD">
+  <title id="cpT">The Crazy Place</title>
+  <desc id="cpD">A circular chamber with four elemental arms. Each arm has a teleporter back to its own tunnel, a riddle and a pedestal. The centre is where souls collect in step seven.</desc>
+  <defs>
+    <radialGradient id="cpBg" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#20302a"/><stop offset="100%" stop-color="#0f1412"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="470" fill="#0f1412"/>
+  <circle cx="320" cy="230" r="200" fill="url(#cpBg)" stroke="#33403a" stroke-width="1.5"/>
+
+  <!-- arms -->
+  <g stroke-width="34" stroke-linecap="round" opacity="0.24" fill="none">
+    <path d="M320 230 L320 76" stroke="#e8705a"/>
+    <path d="M320 230 L474 230" stroke="#5eb8ff"/>
+    <path d="M320 230 L320 384" stroke="#b184f0"/>
+    <path d="M320 230 L166 230" stroke="#e8c33a"/>
+  </g>
+
+  <!-- pedestals -->
+  <g stroke-width="2" fill="#1c2621">
+    <rect x="304" y="120" width="32" height="32" rx="6" stroke="#e8705a"/>
+    <rect x="398" y="214" width="32" height="32" rx="6" stroke="#5eb8ff"/>
+    <rect x="304" y="308" width="32" height="32" rx="6" stroke="#b184f0"/>
+    <rect x="210" y="214" width="32" height="32" rx="6" stroke="#e8c33a"/>
+  </g>
+
+  <!-- teleporters -->
+  <g stroke-width="2" fill="#141b18">
+    <circle cx="320" cy="72" r="17" stroke="#e8705a"/>
+    <circle cx="478" cy="230" r="17" stroke="#5eb8ff"/>
+    <circle cx="320" cy="388" r="17" stroke="#b184f0"/>
+    <circle cx="162" cy="230" r="17" stroke="#e8c33a"/>
+  </g>
+
+  <!-- centre -->
+  <circle cx="320" cy="230" r="34" fill="#1c2621" stroke="#e8a23a" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="320" y="227" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#e8a23a">100</text>
+  <text x="320" y="241" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#e8a23a">SOULS</text>
+
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600">
+    <text x="320" y="46" text-anchor="middle" fill="#e8705a">FIRE</text>
+    <text x="516" y="234" text-anchor="middle" fill="#5eb8ff">ICE</text>
+    <text x="320" y="424" text-anchor="middle" fill="#b184f0">LIGHTNING</text>
+    <text x="124" y="234" text-anchor="middle" fill="#e8c33a">WIND</text>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#9aaba1">
+    <text x="320" y="166" text-anchor="middle">30 kills on the grates</text>
+    <text x="320" y="182" text-anchor="middle">fills the cauldrons</text>
+    <text x="404" y="272" text-anchor="middle">flip 6 stone panels</text>
+    <text x="320" y="298" text-anchor="middle">keyboard: 136 &#183; 357 &#183; 246</text>
+    <text x="232" y="272" text-anchor="middle">align 4 rings</text>
+  </g>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6f8077">
+    <text x="20" y="446">Squares are the staff pedestals &#8212; charge here. Circles are the teleporters back to each tunnel.</text>
+    <text x="20" y="462">A gem can only be taken through its own element's tunnel, so all four portals must be opened once.</text>
+  </g>
+</svg>

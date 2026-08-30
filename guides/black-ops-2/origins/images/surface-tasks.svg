@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" role="img" aria-labelledby="stT stD">
+  <title id="stT">Surface task locations</title>
+  <desc id="stD">Where to find the three ice gravestones, the three wind smoking balls, the three flaming carts for Zombie Blood, and the seal near Generator 5.</desc>
+  <defs><linearGradient id="stBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a2420"/><stop offset="100%" stop-color="#0f1412"/></linearGradient></defs>
+  <rect width="820" height="430" fill="url(#stBg)"/>
+
+  <circle cx="410" cy="215" r="58" fill="#2b3730" stroke="#e8a23a" stroke-width="1.5"/>
+  <text x="410" y="212" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#e8a23a">EXCAVATION</text>
+  <text x="410" y="228" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#e8a23a">SITE</text>
+
+  <g fill="#24302a" stroke="#3c4a43" stroke-width="1.5">
+    <rect x="44" y="180" width="118" height="66" rx="10"/>
+    <rect x="352" y="34" width="118" height="56" rx="10"/>
+    <rect x="352" y="342" width="118" height="56" rx="10"/>
+    <rect x="656" y="140" width="122" height="60" rx="10"/>
+    <rect x="656" y="300" width="122" height="60" rx="10"/>
+  </g>
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13" font-weight="600" fill="#e8efe9">
+    <text x="103" y="218" text-anchor="middle">Church</text>
+    <text x="411" y="67" text-anchor="middle">Gen 5</text>
+    <text x="411" y="375" text-anchor="middle">Gen 4</text>
+    <text x="717" y="176" text-anchor="middle">Gen 2 bunker</text>
+    <text x="717" y="336" text-anchor="middle">Spawn</text>
+  </g>
+
+  <!-- ice gravestones -->
+  <g>
+    <g><rect x="330" y="300" width="20" height="24" rx="4" fill="#141b18" stroke="#5eb8ff" stroke-width="2"/></g>
+    <g><rect x="474" y="252" width="20" height="24" rx="4" fill="#141b18" stroke="#5eb8ff" stroke-width="2"/></g>
+    <g><rect x="622" y="216" width="20" height="24" rx="4" fill="#141b18" stroke="#5eb8ff" stroke-width="2"/></g>
+  </g>
+
+  <!-- wind smoking balls -->
+  <g fill="#141b18" stroke="#e8c33a" stroke-width="2">
+    <circle cx="392" cy="112" r="11"/>
+    <circle cx="470" cy="330" r="11"/>
+    <circle cx="238" cy="300" r="11"/>
+  </g>
+
+  <!-- flaming carts -->
+  <g fill="#141b18" stroke="#e8705a" stroke-width="2">
+    <path d="M330 172 h22 v16 h-22 z"/>
+    <path d="M472 150 h22 v16 h-22 z"/>
+    <path d="M296 246 h22 v16 h-22 z"/>
+  </g>
+
+  <!-- the seal -->
+  <g>
+    <circle cx="510" cy="72" r="19" fill="#1c2621" stroke="#e8a23a" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="510" y="42" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="700" fill="#e8a23a">THE SEAL</text>
+    <text x="510" y="112" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="11.5" fill="#9aaba1">behind + right of Gen 5</text>
+  </g>
+
+  <!-- legend -->
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5">
+    <rect x="24" y="336" width="16" height="18" rx="3" fill="#141b18" stroke="#5eb8ff" stroke-width="2"/>
+    <text x="50" y="350" fill="#5eb8ff">Water gravestone &#8212; freeze, then shoot with a gun</text>
+    <circle cx="32" cy="374" r="9" fill="#141b18" stroke="#e8c33a" stroke-width="2"/>
+    <text x="50" y="379" fill="#e8c33a">Smoking ball &#8212; aim the smoke at the Excavation Site</text>
+    <rect x="24" y="396" width="18" height="14" rx="2" fill="#141b18" stroke="#e8705a" stroke-width="2"/>
+    <text x="50" y="408" fill="#e8705a">Flaming cart &#8212; shoot all three with the Ice Staff for Zombie Blood</text>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6f8077">
+    <text x="20" y="26">Approximate positions &#8212; use the written locations for the exact spot.</text>
+  </g>
+</svg>
