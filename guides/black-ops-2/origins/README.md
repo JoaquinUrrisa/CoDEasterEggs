@@ -49,10 +49,25 @@ so they print cleanly or can be read on a second screen:
 
 ## Images
 
-Diagrams in [`images/`](./images/) are hand-drawn SVG in the site palette: map overview, tank route
-with the Lightning jump points, soul chest locations, the Crazy Place, the ring puzzle, the G-Strike
-tablet loop, the surface-task locations and the staff upgrade flow.
+Two kinds, and you can switch between them.
+
+**Diagrams** in [`images/`](./images/) are hand-drawn SVG in the site palette: map overview, tank
+route with the Lightning jump points, soul chest locations, the Crazy Place, the ring puzzle, the
+G-Strike tablet loop, the surface-task locations and the staff upgrade flow. They label things a
+screenshot cannot, and they show relationships rather than one camera angle.
+
+**Screenshots** come from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Origins) and are
+credited on the page. They show you what a thing actually looks like in the game, which matters when
+you are hunting for a specific pile of rubble.
+
+Five figures have both, and carry a **Diagram / Photo** switch: the dig site, the Crazy Place, the
+tank route, the surface tasks and the G-Strike loop. The **Figures** control in the page header flips
+every one of them at once; a switch on an individual figure overrides just that one. The choice is
+saved in the browser alongside your checklist progress.
 
 The four symbol-chart puzzle keys (fire torches, ice panels, wind rings, lightning keyboard) are
-linked from the [Call of Duty Wiki](https://callofduty.fandom.com/wiki/Elemental_Staffs) and credited
-in the page, since a redrawn symbol chart with a transcription error would be expensive mid-game.
+screenshots rather than redraws, since a transcription error in a symbol chart would be expensive
+mid-game.
+
+On narrow screens the diagrams scroll horizontally at a readable size instead of shrinking their
+labels into nothing.

@@ -23,6 +23,11 @@
         <div class="progress-chip" title="Checked items across the guide">
           Progress <strong id="progressText">0 / 0</strong>
         </div>
+        <span class="view-switch-label">Figures</span>
+        <div class="switch" id="viewSwitch" role="group" aria-label="Show every figure as a diagram or a screenshot">
+          <button type="button" data-viewall="diagram" aria-pressed="true">Diagram</button>
+          <button type="button" data-viewall="photo" aria-pressed="false">Photo</button>
+        </div>
         <button type="button" class="btn btn-ghost" id="resetProgress" title="Clear saved checklist">Reset</button>
       </div>
     </div>
@@ -181,9 +186,19 @@
         Tank Station are east, and Generators 4 and 5 flank the mound in No Man's Land.</p>
       </div>
 
-      <figure>
-        <img src="images/map-overview.svg" alt="Schematic map of Origins showing the Excavation Site in the centre, church and Generator 6 west, Generators 4 and 5 north and south, Workshop, Tank Station and Spawn east, the four elemental tunnels and the tank route" width="880" height="530" />
-        <figcaption>Layout, the six generators, the four elemental tunnels, the tank route and the three robot lanes.</figcaption>
+      <figure class="media" data-view="diagram" data-media-id="map">
+        <div class="media-bar">
+          <span class="media-label">Dig site overview</span>
+          <div class="switch" role="group" aria-label="Show the dig site as a diagram or a screenshot"><button type="button" data-view="diagram" aria-pressed="true">Diagram</button><button type="button" data-view="photo" aria-pressed="false">Photo</button></div>
+        </div>
+        <div class="media-pane" data-pane="diagram">
+          <img src="images/map-overview.svg" alt="Schematic map of Origins showing the Excavation Site in the centre, church and Generator 6 west, Generators 4 and 5 north and south, Workshop, Tank Station and Spawn east, the four elemental tunnels and the tank route" width="880" height="530" />
+        </div>
+        <div class="media-pane" data-pane="photo">
+          <img src="https://static.wikia.nocookie.net/callofduty/images/5/5e/Origins_map_BOII.png" alt="The in-game 115 Conversion Generator Locations map found in Origins" loading="lazy" />
+        </div>
+        <figcaption>Layout, the six generators, the four elemental tunnels, the tank route and the three robot lanes.
+        <span class="src photo-credit">In-game generator map &middot; Call of Duty Wiki (Fandom)</span></figcaption>
       </figure>
 
       <div class="grid grid-2">
@@ -213,7 +228,22 @@
 
         <div class="panel">
           <h3>The Crazy Place</h3>
-          <img src="images/crazy-place.svg" alt="Diagram of the Crazy Place: a circular chamber with four elemental arms, each with a teleporter and a staff pedestal, and the centre where souls collect" width="640" height="470" style="border-radius:8px" />
+          <figure class="media" data-view="diagram" data-media-id="crazy-place" style="margin-top:0">
+            <div class="media-bar">
+              <span class="media-label">The Crazy Place</span>
+              <div class="switch" role="group" aria-label="Show the Crazy Place as a diagram or a screenshot"><button type="button" data-view="diagram" aria-pressed="true">Diagram</button><button type="button" data-view="photo" aria-pressed="false">Photo</button></div>
+            </div>
+            <div class="media-pane" data-pane="diagram">
+              <img src="images/crazy-place.svg" alt="Diagram of the Crazy Place: a circular chamber with four elemental arms, each with a teleporter and a staff pedestal, and the centre where souls collect" width="640" height="470" />
+            </div>
+            <div class="media-pane" data-pane="photo">
+              <div class="shot-grid two-up">
+                <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/3/35/Inside_Crazy_Place_Origins_BOII.png" alt="Inside the Crazy Place" loading="lazy" /><span>Inside the chamber &mdash; note an elemental gem pedestal</span></div>
+                <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/1/19/Wind_Staff_Portal_Origins_BOII.png" alt="A built portal to the Crazy Place" loading="lazy" /><span>A gateway, built with the gramophone and a record</span></div>
+              </div>
+            </div>
+            <figcaption class="photo-credit"><span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption>
+          </figure>
           <p style="margin-top:12px;font-size:14.5px">Four tunnels lead here, one per element. Place the
           gramophone on the table at the end of a tunnel while holding that element's record, then run
           into the gateway &mdash; it falls apart after about 15 seconds.</p>
@@ -265,6 +295,7 @@
               <b>Two different planes</b>
               This orange one is visible to everyone. The step-5 plane only exists under Zombie Blood.
             </div>
+            <figure><div class="shot-grid"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/f/f3/Fire_Staff_Box_Part_Location_Origins_BOII.png" alt="Fire staff part in the Generator 6 Rituals box" loading="lazy" /><span>The Gen 6 Rituals box, open</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/e/ec/Fire_Staff_plane_part_Origins_BOII.png" alt="The plane carrying a fire staff part" loading="lazy" /><span>The orange plane overhead</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/6/64/Fire_Staff_pedestal_Origins_BOII.png" alt="The Staff of Fire on its pedestal" loading="lazy" /><span>Built, on the red pedestal</span></div></div><figcaption>Where the three parts come from. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           </div>
           <div class="panel">
             <h3>Record and tunnel</h3>
@@ -285,6 +316,7 @@
             fire section. Bodies burst into black smoke and fill the four cauldrons. This is the only
             riddle that is not a puzzle, and it consumes no souls, so every other staff should be sitting
             on its pedestal charging while you farm.</p>
+            <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/9/97/Fire_Staff_Challenge_TCP_Killzone_Origins_BOII.png" alt="The metal grates in the Crazy Place fire area" loading="lazy" /><span>Stand on the grates &mdash; the bodies burn to ash</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/1/1d/Fire_Staff_challenge_torches_Origins_BOII.png" alt="Numbered torches in the church basement" loading="lazy" /><span>Three of the seven numbered basement torches</span></div></div><figcaption>The grates, and the torches you light with the four decoded numbers. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           </div>
         </div>
         <div class="upgrade-row">
@@ -339,6 +371,7 @@
             </div>
             <p style="color:var(--text-muted);font-size:14px">Bad digs happen &mdash; a zombie, one live
             grenade, two live grenades. Step back the moment you press dig.</p>
+            <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/5/5c/Staff_of_Ice_Part_Origins_BOII.png" alt="An ice staff part dug from a dig spot" loading="lazy" /><span>What you are digging for</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/7/73/Zombie_blood_Origins_BOII.png" alt="The Zombie Blood power-up" loading="lazy" /><span>Zombie Blood &mdash; your farm feeds step 5</span></div></div><figcaption>Ice parts only appear while it is snowing. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           </div>
           <div class="panel">
             <h3>Record and tunnel</h3>
@@ -376,6 +409,7 @@
               <li>Between the <strong>Excavation Site and a giant footprint</strong>, close to Gen 4.</li>
               <li>On the small hill right of the <strong>Gen 2 bunker back exit</strong>, by the downed mech's hand.</li>
             </ul>
+            <figure><div class="shot-grid"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/8/8b/Ice_Staff_Challenge_Water_Tombstone_1_Origins_BOII.png" alt="First water gravestone" loading="lazy" /><span><b>1</b> &mdash; right of the MP40 near Gen 4</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/1/17/Ice_Staff_Challenge_Water_Tombstone_2_Origins_BOII.png" alt="Second water gravestone" loading="lazy" /><span><b>2</b> &mdash; Excavation Site and a footprint</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/1/18/Ice_Staff_Challenge_Water_Tombstone_3_Origins_BOII.png" alt="Third water gravestone" loading="lazy" /><span><b>3</b> &mdash; the hill by the Gen 2 bunker</span></div></div><figcaption>Freeze each one, then break it with a bullet weapon. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           </div>
         </div>
         <div class="upgrade-row">
@@ -413,9 +447,23 @@
           <span class="staff-meta">P3 &middot; purple pedestal &middot; chains between targets</span>
         </div>
 
-        <figure>
-          <img src="images/tank-route.svg" alt="Diagram of the tank route between the church and the Tank Station with the three Lightning Staff jump-off points marked" width="820" height="330" />
-          <figcaption>One part on the outbound run, two on the return. Two players can split points 2 and 3 in a single trip.</figcaption>
+        <figure class="media" data-view="diagram" data-media-id="tank-route">
+          <div class="media-bar">
+            <span class="media-label">Tank route &amp; jump points</span>
+            <div class="switch" role="group" aria-label="Show the tank route as a diagram or a screenshot"><button type="button" data-view="diagram" aria-pressed="true">Diagram</button><button type="button" data-view="photo" aria-pressed="false">Photo</button></div>
+          </div>
+          <div class="media-pane" data-pane="diagram">
+            <img src="images/tank-route.svg" alt="Diagram of the tank route between the church and the Tank Station with the three Lightning Staff jump-off points marked" width="820" height="330" />
+          </div>
+          <div class="media-pane" data-pane="photo">
+            <div class="shot-grid">
+              <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/d/d9/Purple_Staff_Part_Jump_Location_1_Origins_BOII.png" alt="First tank jump location" loading="lazy" /><span><b>1</b> &mdash; outbound. Cut-off staircase on the right, before the trench to Gen 2</span></div>
+              <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/0/01/Purple_Staff_Part_Jump_Location_2_Origins_BOII.png" alt="Second tank jump location" loading="lazy" /><span><b>2</b> &mdash; return. Scaffolding on the left, into a small hole</span></div>
+              <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/7/73/Purple_Staff_Part_Jump_Location_3_Origins_BOII.png" alt="Third tank jump location" loading="lazy" /><span><b>3</b> &mdash; return. Dirt path on the right, up to the church</span></div>
+            </div>
+          </div>
+          <figcaption>One part on the outbound run, two on the return. Two players can split points 2 and 3 in a single trip.
+          <span class="src photo-credit">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption>
         </figure>
 
         <div class="grid grid-2">
@@ -468,6 +516,7 @@
                 </tbody>
               </table>
             </div>
+            <figure><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/7/79/Staff_of_Lightning_panel_Origins_BOII.png" alt="The electrical panel at Generator 5" loading="lazy" /><span>Panel 1, at Generator 5 &mdash; they all look like this</span></div><figcaption>What you are looking for as you walk past. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
             <div class="callout callout-warn">
               <b>Decoy</b>
               There is an eighth panel just before the No Man's Land door in the Workshop, on the right. It does nothing.
@@ -537,15 +586,31 @@
               Ask the Ice player for the <strong>Golden Helmet</strong> as soon as they have a golden shovel. It
               makes robot feet harmless and turns this job, plus steps 2 and 3, into a formality.
             </div>
+            <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/a/aa/Giant_Mech_Foot_Opening_Origins_BOII.png" alt="A giant robot foot opening" loading="lazy" /><span>The lit foot, opening &mdash; shoot it, then stand under it</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/b/bb/Wind_Staff_Part_Location_Origins_BOII.png" alt="A wind staff part inside a robot head" loading="lazy" /><span>The part, waiting inside the head</span></div></div><figcaption>One foot per pass glows, and which one is random. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
             <label class="check"><input type="checkbox" data-check="wind-built" /><span>Wind Staff built</span></label>
             <label class="check"><input type="checkbox" data-check="wind-up" /><span>Upgraded to Boreas' Fury</span></label>
           </div>
           <div class="panel">
             <h3>Where the smoking balls are</h3>
-            <img src="images/surface-tasks.svg" alt="Diagram showing the three ice gravestones, three wind smoking balls, three flaming carts and the seal near Generator 5" width="820" height="430" style="border-radius:8px" />
-            <p style="margin-top:10px;font-size:14px;color:var(--text-muted)">Same diagram covers the ice
-            gravestones and the flaming carts. Approximate positions &mdash; use the written locations for the
-            exact spot.</p>
+            <figure class="media" data-view="diagram" data-media-id="surface-tasks" style="margin-top:0">
+              <div class="media-bar">
+                <span class="media-label">Surface task locations</span>
+                <div class="switch" role="group" aria-label="Show the surface tasks as a diagram or a screenshot"><button type="button" data-view="diagram" aria-pressed="true">Diagram</button><button type="button" data-view="photo" aria-pressed="false">Photo</button></div>
+              </div>
+              <div class="media-pane" data-pane="diagram">
+                <img src="images/surface-tasks.svg" alt="Diagram showing the three ice gravestones, three wind smoking balls, three flaming carts and the seal near Generator 5" width="820" height="430" />
+              </div>
+              <div class="media-pane" data-pane="photo">
+                <div class="shot-grid">
+                  <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/5/5b/Wind_Staff_Part_Challenge_Smoking_Ball_1_Origins_BOII.png" alt="First smoking stone ball" loading="lazy" /><span><b>1</b> &mdash; behind the Stamin-Up machine at Gen 5</span></div>
+                  <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/6/66/Wind_Staff_Part_Challenge_Smoking_Ball_2_Origins_BOII.png" alt="Second smoking stone ball" loading="lazy" /><span><b>2</b> &mdash; between Gen 4 and the Wind tunnel</span></div>
+                  <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/4/4a/Wind_Staff_Part_Challenge_Smoking_Ball_3_Origins_BOII.png" alt="Third smoking stone ball" loading="lazy" /><span><b>3</b> &mdash; outside No Man's Land, on the tank's return path</span></div>
+                </div>
+              </div>
+              <figcaption>The diagram also covers the ice gravestones and the flaming carts. Approximate
+              positions &mdash; use the written locations for the exact spot.
+              <span class="src photo-credit">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption>
+            </figure>
           </div>
         </div>
 
@@ -656,6 +721,7 @@
             pedestal to take it straight back. Repeat four times and the game counts all four placements.
             Patched in BO3. Side effects are mostly visual.
           </div>
+          <figure><div class="shot-grid"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/4/48/Giant_Robot_Freya_Origins_BOII.png" alt="Freya, the left giant robot" loading="lazy" /><span><b>Freya</b> &mdash; left, around the church. Takes Ull's Arrow</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/1/11/Giant_Robot_Odin_Origins_BOII.png" alt="Odin, the centre giant robot" loading="lazy" /><span><b>Odin</b> &mdash; centre, over the Excavation Site. Takes Boreas' Fury</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/0/0f/Giant_Robot_Thor_Origins_BOII.png" alt="Thor, the right giant robot" loading="lazy" /><span><b>Thor</b> &mdash; right, over Gens 2 and 3. Takes Kimat's Bite</span></div></div><figcaption>Know which robot is which before someone climbs into the wrong one. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s2" /><span>Step 2 &mdash; staffs placed, pedestals gone</span></label>
         </div>
       </article>
@@ -683,6 +749,7 @@
           footprint (the Stamin-Up side aims better), press the button as Maxis says
           <span class="kbd">one</span> during the purge count &mdash; being purged is faster than ejecting &mdash;
           then sprint to the seal, priming on the way.</p>
+          <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/8/8a/Giant_Robot_interior_Origins_BOII.png" alt="Inside a giant robot's head" loading="lazy" /><span>Inside the head, after being stepped on</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/0/0b/G-Strike_button_Origins_BOII.png" alt="The red button inside the robot head" loading="lazy" /><span>The red button, which only appears after step 2</span></div></div><figcaption>Player A presses this while Player B is already looking at the seal. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s3" /><span>Step 3 &mdash; seal cracked</span></label>
         </div>
       </article>
@@ -705,6 +772,7 @@
             <li>Shoot the <strong>small red light on the claw arm</strong> to free a grabbed teammate. Meleeing the light works too.</li>
           </ul>
           <p style="color:var(--text-muted);font-size:14.5px">The drone will not return to its station until you recover it in step 5.</p>
+          <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/7/70/Panzer_Soldats_flying_out_of_pit_Origins_BOII.png" alt="Panzersoldats flying out of the broken seal" loading="lazy" /><span>Ten of them, at once, in a four-player game</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/3/35/Panzer_Soldat_Origins_BOII.png" alt="A Panzersoldat" loading="lazy" /><span>Shoot the red light on the claw arm to free a grabbed teammate</span></div></div><figcaption>Split them up and do not let two lock onto the same player. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s4" /><span>Step 4 &mdash; ten Panzersoldats down</span></label>
         </div>
       </article>
@@ -728,6 +796,7 @@
             <b>Stack first</b>
             Bank two or three Zombie Bloods before you start. The timer is short and you will probably need a second run.
           </div>
+          <figure><img src="https://static.wikia.nocookie.net/callofduty/images/8/8b/Maxis_Drone_upgraded_dropped_Origins_BOII.png" alt="The upgraded Maxis Drone dropped by the pilot zombie" loading="lazy" /><figcaption>The pilot drops the upgraded drone. Both the plane and the pilot are visible only under Zombie Blood. <span class="src">Screenshot: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s5" /><span>Step 5 &mdash; pilot killed, drone recovered</span></label>
         </div>
       </article>
@@ -754,6 +823,7 @@
           </div>
           <p style="color:var(--text-muted);font-size:14.5px">In BO2 the Iron Fists inherit the element of
           whatever staff you held when you picked up the tablet. Removed in BO3.</p>
+          <figure><img src="https://static.wikia.nocookie.net/callofduty/images/3/3e/Templar_Zombie_with_glowing_arms_Origins_BOII.png" alt="A Crusader zombie with white glowing arms" loading="lazy" /><figcaption>White arms mark the ones that count. Pull them into the open first &mdash; a tablet dropped in the wall is unreachable. <span class="src">Screenshot: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s6" /><span>Step 6 &mdash; everyone has Iron Fists</span></label>
         </div>
       </article>
@@ -775,6 +845,7 @@
             Once this is done the Crazy Place is wide open with no Panzers and no robots, and the achievement
             is already banked. Farm high rounds here if you want, because step 8 is a one-way door.
           </div>
+          <figure><div class="shot-grid two-up"><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/f/fa/Zombie_souls_opening_the_portal_Origins_BOII.png" alt="Zombie souls flowing into the centre of the Crazy Place" loading="lazy" /><span>Souls spiral into the centre as the count climbs</span></div><div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/4/45/Crazy_Place_portal_open_Origins_BOII.png" alt="The opened portal in the Crazy Place ceiling" loading="lazy" /><span>Portal open. The falling rocks stop for good</span></div></div><figcaption>This is what progress looks like, and what done looks like. <span class="src">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="s7" /><span>Step 7 &mdash; 100 souls, portal open, trophy popped</span></label>
         </div>
       </article>
@@ -851,9 +922,22 @@
         <p>Everything that is not a staff but still gates a step.</p>
       </div>
 
-      <figure>
-        <img src="images/gstrike-loop.svg" alt="Diagram of the G-Strike tablet loop between the Tank Station and the church, with a warning not to step in mud" width="820" height="320" />
-        <figcaption>All four players can run their own tablet at the same time.</figcaption>
+      <figure class="media" data-view="diagram" data-media-id="gstrike">
+        <div class="media-bar">
+          <span class="media-label">The G-Strike tablet loop</span>
+          <div class="switch" role="group" aria-label="Show the G-Strike loop as a diagram or a screenshot"><button type="button" data-view="diagram" aria-pressed="true">Diagram</button><button type="button" data-view="photo" aria-pressed="false">Photo</button></div>
+        </div>
+        <div class="media-pane" data-pane="diagram">
+          <img src="images/gstrike-loop.svg" alt="Diagram of the G-Strike tablet loop between the Tank Station and the church, with a warning not to step in mud" width="820" height="320" />
+        </div>
+        <div class="media-pane" data-pane="photo">
+          <div class="shot-grid two-up">
+            <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/d/d1/G-Strike_priming_BOII.jpg" alt="Priming the G-Strike beacon" loading="lazy" /><span>Priming the beacon &mdash; do this on the way to the seal, not once you are standing on it</span></div>
+            <div class="shot"><img src="https://static.wikia.nocookie.net/callofduty/images/5/5b/G-Strike_Deployed_Origins_BOII.png" alt="A deployed G-Strike beacon" loading="lazy" /><span>Deployed. Zombies swarm it, then the robots shell the spot</span></div>
+          </div>
+        </div>
+        <figcaption>All four players can run their own tablet at the same time.
+        <span class="src photo-credit">Screenshots: Call of Duty Wiki (Fandom)</span></figcaption>
       </figure>
 
       <div class="grid grid-2">
@@ -880,7 +964,8 @@
           <p>Fill <strong>four soul chests</strong>, 30 kills each. Any player's kills count and a chest vanishes
           when full. Claim it at a <strong>Rituals of the Ancients</strong> board at Gen 1 or Gen 6: aim at the
           <strong>bottom-most medal</strong> and press action.</p>
-          <img src="images/soul-chests.svg" alt="Diagram of the four soul chest locations in giant robot footprints, with the safe one on the Excavation to church path marked" width="820" height="400" style="border-radius:8px;margin-top:10px" />
+          <div class="diagram-scroll" style="margin-top:10px;border-radius:8px;overflow:hidden"><img src="images/soul-chests.svg" alt="Diagram of the four soul chest locations in giant robot footprints, with the safe one on the Excavation to church path marked" width="820" height="400" /></div>
+          <figure><img src="https://static.wikia.nocookie.net/callofduty/images/5/5c/Thunderfist_Pickup_Origins_BOII.png" alt="The One Inch Punch in the Rituals of the Ancients box" loading="lazy" /><figcaption>Aim at the bottom-most medal on the Rituals board and press action. <span class="src">Screenshot: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="punch" /><span>One Inch Punch claimed</span></label>
         </div>
 
@@ -904,6 +989,7 @@
             on the tank path to Gen 4, and the scaffold above the Excavation entrance nearest the church.
             All four and the drone drops a <strong>Magna Collider</strong> at Pack-a-Punch.
           </div>
+          <figure><img src="https://static.wikia.nocookie.net/callofduty/images/c/cf/Maxis_Drone_In-Flight_Origins_BOII.png" alt="The Maxis Drone in flight" loading="lazy" /><figcaption>Deployed, it flies with you for about 90 seconds, then returns to its bench to recharge. <span class="src">Screenshot: Call of Duty Wiki (Fandom)</span></figcaption></figure>
           <label class="check"><input type="checkbox" data-check="drone" /><span>Maxis Drone built</span></label>
         </div>
 

@@ -539,11 +539,99 @@ body[data-role="lightning"] .for-role[data-role-tag="lightning"] .your-job {
   text-align: center;
 }
 
+.diagram-scroll { overflow-x: auto; }
+
+/* ---------- media: diagram / photo ---------- */
+.media {
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+.media-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 8px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-panel);
+}
+.media-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.switch {
+  display: inline-flex;
+  margin-left: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.switch button {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.switch button:hover { color: var(--text); }
+.switch button[aria-pressed="true"] {
+  background: var(--amber);
+  color: #12180f;
+  font-weight: 700;
+}
+
+.media-pane { display: none; }
+.media[data-view="diagram"] .media-pane[data-pane="diagram"],
+.media[data-view="photo"] .media-pane[data-pane="photo"] { display: block; }
+.media-pane > img { width: 100%; display: block; }
+
+.shot-grid { display: grid; gap: 1px; background: var(--line); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.shot-grid.two-up { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.shot { background: var(--bg-elevated); display: flex; flex-direction: column; }
+.shot img { width: 100%; display: block; }
+.shot span {
+  display: block;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  padding: 8px 11px;
+  border-top: 1px solid var(--line);
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* `figcaption .src` is more specific than a bare class, so match that weight */
+.media figcaption .photo-credit,
+.media figcaption.photo-credit { display: none; }
+.media[data-view="photo"] figcaption .photo-credit,
+.media[data-view="photo"] figcaption.photo-credit { display: block; }
+
+/* header control */
+.view-switch-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.header-inner { flex-wrap: wrap; }
+.header-actions { flex-wrap: wrap; }
+
 /* ---------- phones ---------- */
 .brand-kicker { white-space: nowrap; }
 
 @media (max-width: 620px) {
-  html { scroll-padding-top: 132px; }
+  html { scroll-padding-top: 186px; }
   .header-inner { padding: 8px 14px; gap: 10px; min-height: 0; }
   .brand-title { font-size: 20px; }
   .kicker-rest { display: none; }
@@ -557,4 +645,15 @@ body[data-role="lightning"] .for-role[data-role-tag="lightning"] .your-job {
   .egg-num { font-size: 28px; min-width: 28px; }
   .panel { padding: 16px; }
   th, td { padding: 9px 10px; }
+  .shot-grid, .shot-grid.two-up { grid-template-columns: 1fr; }
+
+  /* diagrams are wide by nature — let them scroll at a legible size rather than
+     shrinking the labels into nothing */
+  .media-pane[data-pane="diagram"],
+  .diagram-scroll,
+  figure { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  img[src$=".svg"] { width: 660px; max-width: none; }
+  .shot img, .media-pane[data-pane="photo"] img { width: 100%; max-width: 100%; }
+  .media-bar { padding: 7px 8px 7px 12px; gap: 8px; }
+  .view-switch-label { display: none; }
 }

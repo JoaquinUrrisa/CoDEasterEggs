@@ -3,9 +3,15 @@
 
   const ELEMENTS = ["fire", "ice", "lightning", "wind"];
 
+  const VIEWS = ["diagram", "photo"];
+
   const state = {
     role: null,
     checks: {},
+    // default view for every figure that has both a diagram and a screenshot
+    view: "diagram",
+    // per-figure overrides, keyed by data-media-id
+    viewOverrides: {},
   };
 
   const progressText = document.getElementById("progressText");
@@ -13,6 +19,8 @@
   const roleButtons = [...document.querySelectorAll(".role")];
   const tabs = [...document.querySelectorAll(".tab")];
   const checkboxes = [...document.querySelectorAll("[data-check]")];
+  const mediaBlocks = [...document.querySelectorAll(".media")];
+  const globalViewButtons = [...document.querySelectorAll("#viewSwitch button")];
 
   function load() {
     try {
@@ -23,6 +31,11 @@
         state.role = ELEMENTS.includes(parsed.role) ? parsed.role : null;
         state.checks =
           parsed.checks && typeof parsed.checks === "object" ? parsed.checks : {};
+        state.view = VIEWS.includes(parsed.view) ? parsed.view : "diagram";
+        state.viewOverrides =
+          parsed.viewOverrides && typeof parsed.viewOverrides === "object"
+            ? parsed.viewOverrides
+            : {};
       }
     } catch {
       /* ignore corrupt or unavailable storage */
@@ -33,7 +46,12 @@
     try {
       localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify({ role: state.role, checks: state.checks })
+        JSON.stringify({
+          role: state.role,
+          checks: state.checks,
+          view: state.view,
+          viewOverrides: state.viewOverrides,
+        })
       );
     } catch {
       /* storage can be blocked; the page still works without it */
@@ -123,6 +141,51 @@
     });
   });
 
+  /* ---------- diagram / photo switching ---------- */
+
+  function viewFor(media) {
+    return state.viewOverrides[media.dataset.mediaId] || state.view;
+  }
+
+  function applyViews() {
+    mediaBlocks.forEach((media) => {
+      const view = viewFor(media);
+      media.dataset.view = view;
+      media.querySelectorAll(".media-bar .switch button").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.view === view));
+      });
+    });
+    globalViewButtons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.viewall === state.view));
+    });
+  }
+
+  // one figure at a time
+  mediaBlocks.forEach((media) => {
+    media.querySelectorAll(".media-bar .switch button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const view = button.dataset.view;
+        if (view === state.view) {
+          delete state.viewOverrides[media.dataset.mediaId];
+        } else {
+          state.viewOverrides[media.dataset.mediaId] = view;
+        }
+        applyViews();
+        save();
+      });
+    });
+  });
+
+  // every figure at once — also clears any per-figure overrides
+  globalViewButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.view = button.dataset.viewall;
+      state.viewOverrides = {};
+      applyViews();
+      save();
+    });
+  });
+
   /* ---------- section nav highlighting ---------- */
 
   const navLinks = [...document.querySelectorAll(".section-nav a")];
@@ -151,6 +214,7 @@
   /* ---------- boot ---------- */
 
   load();
+  applyViews();
   applyRole();
   applyChecks();
   showStaff(state.role || "fire");

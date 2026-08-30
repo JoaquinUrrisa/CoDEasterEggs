@@ -22,7 +22,7 @@ Includes:
 - All four staffs: parts, records, tunnels, and the four-part upgrade chain
 - All eight Easter Egg steps in order, with checklists and saved progress
 - The four puzzle keys in one place
-- Hand-drawn diagrams for the map, tank route, soul chests, ring puzzle and G-Strike loop
+- Hand-drawn diagrams for the map, tank route, soul chests, ring puzzle and G-Strike loop, with a **Diagram / Photo** switch on the figures that also have an in-game screenshot
 - Printable per-player briefs in [`players/`](guides/black-ops-2/origins/players/)
 
 ### TranZit — Tower of Babble
