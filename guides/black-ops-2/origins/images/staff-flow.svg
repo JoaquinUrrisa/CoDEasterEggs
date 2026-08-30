@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 250" role="img" aria-labelledby="sfT sfD">
+  <title id="sfT">The staff upgrade pattern</title>
+  <desc id="sfD">Every staff follows the same four sub-steps: the Crazy Place riddle, the surface task, the ring puzzle, then charging on the elemental pedestal.</desc>
+  <defs>
+    <linearGradient id="sfBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a2420"/><stop offset="100%" stop-color="#0f1412"/></linearGradient>
+    <marker id="sfArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#45554c"/>
+    </marker>
+  </defs>
+  <rect width="820" height="250" fill="url(#sfBg)"/>
+
+  <g stroke="#45554c" stroke-width="2" fill="none">
+    <path d="M196 118 H 224" marker-end="url(#sfArrow)"/>
+    <path d="M392 118 H 420" marker-end="url(#sfArrow)"/>
+    <path d="M588 118 H 616" marker-end="url(#sfArrow)"/>
+  </g>
+
+  <g>
+    <rect x="24" y="60" width="172" height="116" rx="10" fill="#1c2621" stroke="#33403a" stroke-width="1.5"/>
+    <text x="110" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#e8a23a">A</text>
+    <text x="110" y="118" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13.5" font-weight="600" fill="#e8efe9">Crazy Place riddle</text>
+    <text x="110" y="142" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aaba1">element specific</text>
+  </g>
+  <g>
+    <rect x="220" y="60" width="172" height="116" rx="10" fill="#1c2621" stroke="#33403a" stroke-width="1.5"/>
+    <text x="306" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#e8a23a">B</text>
+    <text x="306" y="118" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13.5" font-weight="600" fill="#e8efe9">Surface task</text>
+    <text x="306" y="142" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aaba1">beam of light confirms</text>
+  </g>
+  <g>
+    <rect x="416" y="60" width="172" height="116" rx="10" fill="#1c2621" stroke="#33403a" stroke-width="1.5"/>
+    <text x="502" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#e8a23a">C</text>
+    <text x="502" y="118" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13.5" font-weight="600" fill="#e8efe9">Ring puzzle</text>
+    <text x="502" y="142" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aaba1">one player at a time</text>
+  </g>
+  <g>
+    <rect x="612" y="60" width="184" height="116" rx="10" fill="#1c2621" stroke="#e8a23a" stroke-width="1.5"/>
+    <text x="704" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="22" font-weight="700" fill="#e8a23a">D</text>
+    <text x="704" y="118" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="13.5" font-weight="600" fill="#e8efe9">Charge on the pedestal</text>
+    <text x="704" y="142" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aaba1">~20 kills &#183; 25 lightning</text>
+  </g>
+
+  <text x="410" y="34" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="14" font-weight="600" fill="#e8efe9">Same four sub-steps for all four staffs</text>
+  <text x="410" y="212" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6fbf7a">Several staffs can sit on their pedestals and charge from the same kills.</text>
+  <text x="410" y="232" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6f8077">Lose a staff and it returns to its Excavation pedestal with the upgrade intact.</text>
+</svg>

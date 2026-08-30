@@ -2,11 +2,28 @@
 
 CoDEasterEggs collects clear, beginner-friendly guides for Call of Duty Zombies Easter Eggs — written so you can follow along while you play.
 
+**[Open the site →](https://joaquinurrisa.github.io/CoDEasterEggs/)** — pick a map from the landing page.
+
 ## Guides
 
-| Game | Map | Easter Egg | Format |
-| --- | --- | --- | --- |
-| Black Ops II | TranZit | [Tower of Babble](guides/black-ops-2/tranzit/) | Interactive web companion |
+| Game | Map | Easter Egg | Players | Format |
+| --- | --- | --- | --- | --- |
+| Black Ops II | Origins | [Little Lost Girl](guides/black-ops-2/origins/) | 4 (role split) | Interactive web companion |
+| Black Ops II | TranZit | [Tower of Babble](guides/black-ops-2/tranzit/) | 1–4 | Interactive web companion |
+
+### Origins — Little Lost Girl
+
+Open [`guides/black-ops-2/origins/index.html`](guides/black-ops-2/origins/index.html) on a phone or tablet next to your game.
+
+Includes:
+
+- A four-player role split — pick your staff and the page tags your jobs everywhere
+- Round-by-round plan, plus what can run in parallel and what has to queue
+- All four staffs: parts, records, tunnels, and the four-part upgrade chain
+- All eight Easter Egg steps in order, with checklists and saved progress
+- The four puzzle keys in one place
+- Hand-drawn diagrams for the map, tank route, soul chests, ring puzzle and G-Strike loop
+- Printable per-player briefs in [`players/`](guides/black-ops-2/origins/players/)
 
 ### TranZit — Tower of Babble
 
@@ -44,11 +61,21 @@ Includes:
 ## Repository structure
 
 ```text
+index.html            # Landing page — pick a map
+styles.css            # Landing page styles
+assets/               # Landing page cover art
 guides/
   black-ops-2/
+    origins/          # Little Lost Girl interactive guide
+      images/         # Hand-drawn location / step diagrams
+      players/        # Printable per-player briefs
     tranzit/          # Tower of Babble interactive guide
       images/         # Location / step diagrams
 ```
+
+Each guide folder is self-contained: an `index.html`, its own stylesheet and script, and its diagrams.
+Nothing is built or bundled — open the file in a browser, or serve the repo root with
+`python3 -m http.server 8080` and visit `http://localhost:8080/`.
 
 ## Contributing
 

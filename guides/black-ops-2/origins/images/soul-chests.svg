@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" role="img" aria-labelledby="scT scD">
+  <title id="scT">The four soul chests</title>
+  <desc id="scD">Four soul chests sit in giant robot footprints. Thirty kills fill each one. Only the chest on the Excavation to church path sits outside a robot walking lane.</desc>
+  <defs><linearGradient id="scBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a2420"/><stop offset="100%" stop-color="#0f1412"/></linearGradient></defs>
+  <rect width="820" height="400" fill="url(#scBg)"/>
+
+  <g stroke-dasharray="4 8" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M150 20 V 380" stroke="#5eb8ff"/>
+    <path d="M430 20 V 380" stroke="#e8c33a"/>
+    <path d="M690 20 V 380" stroke="#b184f0"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="0.1em">
+    <text x="156" y="18" fill="#5eb8ff">FREYA</text>
+    <text x="436" y="18" fill="#e8c33a">ODIN</text>
+    <text x="696" y="18" fill="#b184f0">THOR</text>
+  </g>
+
+  <circle cx="430" cy="200" r="52" fill="#2b3730" stroke="#e8a23a" stroke-width="1.5"/>
+  <text x="430" y="197" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#e8a23a">EXCAVATION</text>
+  <text x="430" y="213" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#e8a23a">SITE</text>
+
+  <!-- footprints -->
+  <g>
+    <ellipse cx="300" cy="118" rx="46" ry="30" fill="#24302a" stroke="#6fbf7a" stroke-width="2"/>
+    <text x="300" y="123" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#6fbf7a">2</text>
+    <text x="300" y="76" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#e8efe9">Excavation &#8594; church path</text>
+    <text x="300" y="92" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6fbf7a">SAFE &#8212; outside every lane</text>
+  </g>
+  <g>
+    <ellipse cx="640" cy="120" rx="46" ry="30" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="640" y="125" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#e8a23a">1</text>
+    <text x="640" y="80" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#e8efe9">Gen 5 / Stamin-Up</text>
+  </g>
+  <g>
+    <ellipse cx="300" cy="312" rx="46" ry="30" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="300" y="317" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#e8a23a">3</text>
+    <text x="300" y="366" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#e8efe9">No Man's Land &#8594; Gen 4</text>
+  </g>
+  <g>
+    <ellipse cx="618" cy="306" rx="46" ry="30" fill="#24302a" stroke="#e8a23a" stroke-width="2"/>
+    <text x="618" y="311" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700" fill="#e8a23a">4</text>
+    <text x="618" y="360" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#e8efe9">Corner by Gen 4 / MP-40</text>
+  </g>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#e8705a">
+    <text x="20" y="386">A robot stepping on an unfilled chest closes it and resets progress. Dig-spot zombies never count.</text>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#9aaba1">
+    <text x="20" y="38">30 kills each &#183; any player's kills count &#183; all four full &#8594; One Inch Punch at a Rituals board</text>
+  </g>
+</svg>

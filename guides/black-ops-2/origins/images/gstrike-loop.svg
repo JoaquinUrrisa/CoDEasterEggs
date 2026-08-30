@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" role="img" aria-labelledby="gsT gsD">
+  <title id="gsT">The G-Strike tablet loop</title>
+  <desc id="gsD">Take a dirty tablet from the Tank Station, cleanse it in the church basin with twenty melee kills, carry it back without stepping in mud, then twenty more melee kills at the Tank Station table.</desc>
+  <defs>
+    <linearGradient id="gsBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a2420"/><stop offset="100%" stop-color="#0f1412"/></linearGradient>
+    <marker id="gsArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#e8a23a"/>
+    </marker>
+  </defs>
+  <rect width="820" height="320" fill="url(#gsBg)"/>
+
+  <g fill="#24302a" stroke="#3c4a43" stroke-width="1.5">
+    <rect x="52" y="112" width="180" height="96" rx="10"/>
+    <rect x="588" y="112" width="180" height="96" rx="10"/>
+  </g>
+  <g font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600" fill="#e8efe9">
+    <text x="142" y="146" text-anchor="middle">Tank Station</text>
+    <text x="678" y="146" text-anchor="middle">Church</text>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#9aaba1">
+    <text x="142" y="166" text-anchor="middle">Gen 2 &#183; 4 dirty tablets</text>
+    <text x="142" y="182" text-anchor="middle">no pickup prompt appears</text>
+    <text x="678" y="166" text-anchor="middle">basin of holy water</text>
+    <text x="678" y="182" text-anchor="middle">insert &#183; 20 melee kills</text>
+  </g>
+
+  <path d="M240 138 H 580" fill="none" stroke="#e8a23a" stroke-width="2" marker-end="url(#gsArrow)"/>
+  <path d="M580 194 H 240" fill="none" stroke="#e8a23a" stroke-width="2" marker-end="url(#gsArrow)"/>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#e8a23a">
+    <text x="410" y="128" text-anchor="middle">1 &#183; carry the dirty tablet</text>
+    <text x="410" y="216" text-anchor="middle">3 &#183; carry it back clean</text>
+  </g>
+
+  <rect x="330" y="230" width="160" height="34" rx="8" fill="#2a1e1c" stroke="#e8705a" stroke-width="1.5"/>
+  <text x="410" y="252" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="700" fill="#e8705a">DO NOT STEP IN MUD</text>
+  <text x="410" y="282" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#9aaba1">Use the wooden beams, or just ride the tank across.</text>
+  <text x="410" y="300" text-anchor="middle" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="12.5" fill="#9aaba1">Muddy tablet? Back to the basin and press action to rinse it.</text>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#6fbf7a">
+    <text x="142" y="240" text-anchor="middle">4 &#183; place on the table</text>
+    <text x="142" y="256" text-anchor="middle">+ 20 more melee kills</text>
+    <text x="142" y="276" text-anchor="middle" fill="#e8a23a">&#8594; G-STRIKE BEACON</text>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#6f8077">
+    <text x="20" y="34">All four players can run their own tablet at the same time. Do it early &#8212; 40 melee kills late is misery.</text>
+  </g>
+</svg>

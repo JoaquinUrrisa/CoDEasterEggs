@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Beginner-friendly interactive guide for the Call of Duty Black Ops 2 Origins Little Lost Girl Easter Egg. Four-player role split, all eight steps, every staff build and upgrade, puzzle keys and checklists." />
+  <meta name="theme-color" content="#0f1412" />
+  <title>Little Lost Girl — Origins Easter Egg Guide</title>
+  <link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-kicker"><a href="../../../">CoDEasterEggs</a><span class="kicker-rest"> &middot; Black Ops II &middot; Zombies</span></span>
+        <p class="brand-title">Little Lost Girl</p>
+      </div>
+      <div class="header-actions">
+        <div class="progress-chip" title="Checked items across the guide">
+          Progress <strong id="progressText">0 / 0</strong>
+        </div>
+        <button type="button" class="btn btn-ghost" id="resetProgress" title="Clear saved checklist">Reset</button>
+      </div>
+    </div>
+    <nav class="section-nav" aria-label="Guide sections">
+      <a href="#overview">Overview</a>
+      <a href="#squad">Squad</a>
+      <a href="#map">Map</a>
+      <a href="#staffs">Staffs</a>
+      <a href="#steps">8 Steps</a>
+      <a href="#keys">Puzzle Keys</a>
+      <a href="#gear">Gear</a>
+      <a href="#help">Rules</a>
+      <a href="#links">Sources</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+
+    <!-- ================= OVERVIEW ================= -->
+    <section class="hero" id="overview">
+      <p class="eyebrow">Interactive companion guide · squad of four</p>
+      <h1>Little Lost Girl</h1>
+      <p class="hero-lead">Free Samantha from Agartha. Four players, four elemental staffs, one dig
+      site in Northern France that gets exponentially harder every round. This guide splits the whole
+      Easter Egg into four parallel jobs so nothing sits waiting its turn.</p>
+      <div class="tag-row">
+        <span class="tag">8 steps</span>
+        <span class="tag">4 staffs</span>
+        <span class="tag">6 generators</span>
+        <span class="tag">~2&ndash;3 hours</span>
+        <span class="tag">Silver trophy</span>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:26px">
+        <div class="panel">
+          <p class="panel-title-sm">What you are actually doing</p>
+          <ol class="steps-ol">
+            <li><strong>Secure the keys</strong> &mdash; build and upgrade all four staffs</li>
+            <li><strong>Ascend from darkness</strong> &mdash; staffs into the robot pedestals</li>
+            <li><strong>Rain fire</strong> &mdash; robot button plus a G-Strike on the seal</li>
+            <li><strong>Unleash the horde</strong> &mdash; ten Panzersoldats</li>
+            <li><strong>Skewer the winged beast</strong> &mdash; the Zombie Blood pilot</li>
+            <li><strong>Wield a fist of iron</strong> &mdash; everyone gets Iron Fists</li>
+            <li><strong>Raise hell</strong> &mdash; 100 souls, and the trophy pops</li>
+            <li><strong>Freedom</strong> &mdash; ends the game</li>
+          </ol>
+        </div>
+        <div class="panel">
+          <p class="panel-title-sm">The two hard clocks</p>
+          <div class="callout callout-warn">
+            <b>Snow</b>
+            Every Ice Staff part comes from a dig spot, and dig spots only give parts <strong>while it is
+            snowing</strong>. Snow lands around rounds 2&ndash;4, again near round 10, then at random. Nobody
+            ends a round while it is snowing.
+          </div>
+          <div class="callout callout-warn">
+            <b>Round 8</b>
+            The first Panzersoldat drops a Fire Staff part and it is the <strong>only</strong> source. It only
+            spawns if the No Man's Land door is already open, so open it before round 8.
+          </div>
+          <p style="font-size:14px;color:var(--text-muted)">Written for <strong>Black Ops II</strong>. The
+          Black Ops III Zombies Chronicles version plays the same &mdash; differences are listed under
+          <a href="#help">Rules</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SQUAD ================= -->
+    <section id="squad">
+      <div class="section-head">
+        <h2>Pick your staff</h2>
+        <p>Each player owns one staff and one zone. Choose yours and the guide will tag your jobs
+        wherever they appear, and open your staff panel by default.</p>
+      </div>
+
+      <div class="roles" id="rolePicker">
+        <button type="button" class="role" data-el="fire" aria-pressed="false">
+          <span class="role-who">P1</span>
+          <span class="role-el">Fire</span>
+          <span class="role-note">Church and Gen 6. The plane, the round-8 Panzer, the red record.</span>
+        </button>
+        <button type="button" class="role" data-el="ice" aria-pressed="false">
+          <span class="role-who">P2</span>
+          <span class="role-el">Ice</span>
+          <span class="role-note">Shovel duty. Digs every snow window. Runs the Zombie Blood farm.</span>
+        </button>
+        <button type="button" class="role" data-el="lightning" aria-pressed="false">
+          <span class="role-who">P3</span>
+          <span class="role-el">Lightning</span>
+          <span class="role-note">Tank driver. Turns the seven electrical panels.</span>
+        </button>
+        <button type="button" class="role" data-el="wind" aria-pressed="false">
+          <span class="role-who">P4</span>
+          <span class="role-el">Wind</span>
+          <span class="role-note">Robot entries. Carries the gramophone and runs the portal circuit.</span>
+        </button>
+      </div>
+      <p style="font-family:var(--font-mono);font-size:11px;color:var(--text-dim);margin-top:10px">
+        Saved in your own browser. Everyone picks their own on their own phone.</p>
+
+      <p class="panel-title-sm" style="margin-top:22px">Printable single-player briefs</p>
+      <div class="link-grid">
+        <a class="link-card" href="players/FireStaff.md"><b>Fire Staff brief</b><span>P1 &middot; markdown</span></a>
+        <a class="link-card" href="players/IceStaff.md"><b>Ice Staff brief</b><span>P2 &middot; markdown</span></a>
+        <a class="link-card" href="players/LightningStaff.md"><b>Lightning Staff brief</b><span>P3 &middot; markdown</span></a>
+        <a class="link-card" href="players/WindStaff.md"><b>Wind Staff brief</b><span>P4 &middot; markdown</span></a>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:24px">
+        <div class="panel">
+          <h3>Round plan</h3>
+          <p style="color:var(--text-muted);font-size:14px">Targets, not rules. Nobody ends a round without calling it first.</p>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>Rounds</th><th>The squad</th></tr></thead>
+              <tbody>
+                <tr><td class="num">1&ndash;2</td><td>Shovels from spawn. Cap <strong>Gen 1</strong> and take the free Zombie Blood from the Rituals box. Wind player picks up the <strong>gramophone</strong> and hunts the <strong>black record</strong>.</td></tr>
+                <tr><td class="num">2&ndash;4</td><td><strong>First snow window.</strong> Ice player digs spawn and middle. Everyone else opens toward Gens 2 and 3 and caps them. Lower Excavation opens with gramophone plus black record.</td></tr>
+                <tr><td class="num">4&ndash;7</td><td><strong>No Man's Land door open before round 8.</strong> Cap Gens 4 and 5, open the church, cap Gen 6. Fire player takes the Rituals-box part, the red record, and shoots down the plane.</td></tr>
+                <tr><td class="num">8</td><td>First <strong>Panzersoldat</strong>. Fire player kills it for the last part.</td></tr>
+                <tr><td class="num">8&ndash;12</td><td><strong>Gramophone circuit:</strong> Fire, Wind, Lightning, Ice. Everyone builds. Round-10 snow covers missing Ice parts. G-Strike tablets run in parallel.</td></tr>
+                <tr><td class="num">12+</td><td>Upgrade chain, Maxis Drone, soul chests, then steps 2 through 8 back to back.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Parallel or queue</h3>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>Run together</th><th>One at a time</th></tr></thead>
+              <tbody>
+                <tr><td>All four staff part hunts</td><td>Gramophone portals &mdash; there is one gramophone</td></tr>
+                <tr><td>All four G-Strike tablets</td><td>The ring puzzle &mdash; one colour at a time</td></tr>
+                <tr><td>All four Crazy Place riddles</td><td>Riddle, surface task, rings, charge</td></tr>
+                <tr><td>Soul chests &mdash; anyone's kills count</td><td>Steps 3 through 8</td></tr>
+                <tr><td>Charging several staffs at once</td><td>Steps 1 and 2 need all six generators live</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout-tip">
+            <b>The free lunch</b>
+            The Fire riddle is 30 kills on the Crazy Place grates and it <strong>does not consume souls</strong>.
+            Everyone else leaves their staff on its pedestal during that farm and charges for free off the same kills.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MAP ================= -->
+    <section id="map">
+      <div class="section-head">
+        <h2>The dig site</h2>
+        <p>The Excavation Site sits in the middle of everything. The church is west, spawn and the
+        Tank Station are east, and Generators 4 and 5 flank the mound in No Man's Land.</p>
+      </div>
+
+      <figure>
+        <img src="images/map-overview.svg" alt="Schematic map of Origins showing the Excavation Site in the centre, church and Generator 6 west, Generators 4 and 5 north and south, Workshop, Tank Station and Spawn east, the four elemental tunnels and the tank route" width="880" height="530" />
+        <figcaption>Layout, the six generators, the four elemental tunnels, the tank route and the three robot lanes.</figcaption>
+      </figure>
+
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>Generators</h3>
+          <p style="color:var(--text-muted);font-size:14px"><strong>200 points per player</strong> &mdash; 800 in a four-man. Whoever pays gets it back on capture; everyone on the pad gets +100. All six live opens <strong>Pack-a-Punch</strong>.</p>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>Gen</th><th>Where</th><th>What is there</th></tr></thead>
+              <tbody>
+                <tr><td class="num">1</td><td>Spawn, upper level</td><td>Quick Revive, Rituals box, 2 shovels, drone Brain</td></tr>
+                <tr><td class="num">2</td><td>Tank Station</td><td>Blue record, MP40, G-Strike tablets, tank terminus</td></tr>
+                <tr><td class="num">3</td><td>By Speed Cola</td><td>Alternate spawn to workshop path</td></tr>
+                <tr><td class="num">4</td><td>No Man's Land, left</td><td>Juggernog, <strong>Wind tunnel</strong>, Der Wunderfizz</td></tr>
+                <tr><td class="num">5</td><td>No Man's Land, right</td><td>Stamin-Up, <strong>Lightning tunnel</strong>, <strong>the seal</strong></td></tr>
+                <tr><td class="num">6</td><td>Behind the church</td><td>Rituals box, red record, <strong>Ice tunnel</strong>, tank start</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout-warn">
+            <b>Defend them</b>
+            From round 10, Templars periodically attack a live generator. Losing one kills Pack-a-Punch
+            and blocks steps 1, 2 and 8. Killing the attackers drops a Max Ammo, and a Monkey Bomb or
+            G-Strike thrown in the area stops the attack outright.
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>The Crazy Place</h3>
+          <img src="images/crazy-place.svg" alt="Diagram of the Crazy Place: a circular chamber with four elemental arms, each with a teleporter and a staff pedestal, and the centre where souls collect" width="640" height="470" style="border-radius:8px" />
+          <p style="margin-top:12px;font-size:14.5px">Four tunnels lead here, one per element. Place the
+          gramophone on the table at the end of a tunnel while holding that element's record, then run
+          into the gateway &mdash; it falls apart after about 15 seconds.</p>
+          <div class="callout callout-tip">
+            <b>You only need the gramophone once per element</b>
+            A gem can only be taken through its own element's tunnel, hence four trips. But once a player
+            has used a portal, they can rebuild it from <em>inside</em> the Crazy Place without the gramophone.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STAFFS ================= -->
+    <section id="staffs">
+      <div class="section-head">
+        <h2>The four staffs</h2>
+        <p>Three parts plus an elemental gem, built on the lowest level of the Excavation Site. Then
+        four upgrade sub-steps that are identical in shape for every staff.</p>
+      </div>
+
+      <figure>
+        <img src="images/staff-flow.svg" alt="Diagram of the four staff upgrade sub-steps: Crazy Place riddle, surface task, ring puzzle, then charging on the pedestal" width="820" height="250" />
+        <figcaption>Learn this once and all four staffs are the same job with different puzzles.</figcaption>
+      </figure>
+
+      <div class="tabs" role="tablist" id="staffTabs">
+        <button class="tab" data-el="fire" role="tab" aria-selected="true" aria-controls="staff-fire" id="tab-fire">Fire</button>
+        <button class="tab" data-el="ice" role="tab" aria-selected="false" aria-controls="staff-ice" id="tab-ice">Ice</button>
+        <button class="tab" data-el="lightning" role="tab" aria-selected="false" aria-controls="staff-lightning" id="tab-lightning">Lightning</button>
+        <button class="tab" data-el="wind" role="tab" aria-selected="false" aria-controls="staff-wind" id="tab-wind">Wind</button>
+      </div>
+
+      <!-- FIRE -->
+      <div class="staff-panel" id="staff-fire" data-el="fire" role="tabpanel" aria-labelledby="tab-fire">
+        <div class="staff-head">
+          <span class="staff-name">Kagutsuchi's Blood</span>
+          <span class="staff-meta">P1 &middot; red pedestal &middot; charge shot leaves burning ground</span>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="panel">
+            <h3>Three parts</h3>
+            <ul class="bullets">
+              <li><strong>Generator 6 Rituals box</strong> &mdash; opens with the part the moment Gen 6 is powered.</li>
+              <li><strong>The orange plane</strong> &mdash; spawns the round <em>after</em> the church path is opened. Shoot it down; the part lands beside the soul chest nearest the Excavation Site.</li>
+              <li><strong>The round-8 Panzersoldat</strong> &mdash; the only source, and it needs the No Man's Land door open beforehand.</li>
+            </ul>
+            <div class="callout callout-warn">
+              <b>Two different planes</b>
+              This orange one is visible to everyone. The step-5 plane only exists under Zombie Blood.
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Record and tunnel</h3>
+            <p><strong>Red record</strong> spawns near the church: on the boxes between the tank and the
+            staircase up, on the benches opposite the basin, or on boxes by Generator 6.</p>
+            <p><strong>Fire tunnel</strong> is left of the spawn exit next to the Rituals box, on the way to
+            Generator 3.</p>
+            <label class="check"><input type="checkbox" data-check="fire-built" /><span>Fire Staff built</span></label>
+            <label class="check"><input type="checkbox" data-check="fire-up" /><span>Upgraded to Kagutsuchi's Blood</span></label>
+          </div>
+        </div>
+
+        <div class="upgrade-row">
+          <div class="upgrade-letter">A</div>
+          <div>
+            <h4>Crazy Place &mdash; burn 30 on the grates</h4>
+            <p>Kill roughly <strong>30 zombies with the Fire Staff standing on the metal grates</strong> in the
+            fire section. Bodies burst into black smoke and fill the four cauldrons. This is the only
+            riddle that is not a puzzle, and it consumes no souls, so every other staff should be sitting
+            on its pedestal charging while you farm.</p>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">B</div>
+          <div>
+            <h4>Church &mdash; the torch puzzle</h4>
+            <p>The <strong>basement</strong> has seven torches numbered 1 to 7. The <strong>4 is a bloodstain</strong>,
+            not chalk, which catches everyone. <strong>Upstairs on the far wall</strong>, four symbols are lit;
+            those four are your torch numbers.</p>
+            <p><strong>Decoding, ternary:</strong> each symbol is columns of circles. Filled is 1, an outline
+            is 0, two filled in one column is 2. The left column is the <span class="kbd">3s</span> place and
+            the right is the <span class="kbd">1s</span> place. So <span class="kbd">1|1</span> is 4,
+            <span class="kbd">1|2</span> is 5, <span class="kbd">2|0</span> is 6 and <span class="kbd">2|1</span>
+            is 7. <strong>4 is always one of the four.</strong> The chart is in
+            <a href="#keys">Puzzle Keys</a>.</p>
+            <p>Light all four with the staff. They must <strong>burn at the same time</strong> and the flames are
+            short. Order does not matter, so relight whichever dies.</p>
+            <div class="callout callout-tip">
+              <b>While you are down there</b>
+              Turn Lightning panel 2 (by torch 3, point it <strong>right</strong>) and upstairs panel 3 (by the
+              repairable window, point it <strong>up</strong>) for P3.
+            </div>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">C</div>
+          <div><h4>Rings, all red</h4><p>Four levers on the lower Excavation level. All four ring lights red, then shoot the red orb with the Fire Staff.</p></div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">D</div>
+          <div><h4>Charge &mdash; red pedestal, about 20 kills</h4><p>Samantha calls it out, the HUD icon gains a red outline, and the ultimate is yours.</p></div>
+        </div>
+      </div>
+
+      <!-- ICE -->
+      <div class="staff-panel" id="staff-ice" data-el="ice" role="tabpanel" aria-labelledby="tab-ice" hidden>
+        <div class="staff-head">
+          <span class="staff-name">Ull's Arrow</span>
+          <span class="staff-meta">P2 &middot; blue pedestal &middot; charged blizzard pulls and freezes</span>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="panel">
+            <h3>Three parts &mdash; dug, and only while it snows</h3>
+            <p>One in the <strong>starting area</strong> (spawn through workshop, either side), one in the
+            <strong>middle of the map</strong>, one <strong>near the church</strong>. Dig every pile in your zone
+            while the snow lasts; results are random.</p>
+            <div class="callout callout-warn">
+              <b>You set the squad's tempo</b>
+              Call it on comms every single time: <em>snowing, nobody end the round</em>. Missing the
+              rounds 2 to 4 window can cost you six rounds of waiting.
+            </div>
+            <p style="color:var(--text-muted);font-size:14px">Bad digs happen &mdash; a zombie, one live
+            grenade, two live grenades. Step back the moment you press dig.</p>
+          </div>
+          <div class="panel">
+            <h3>Record and tunnel</h3>
+            <p><strong>Blue record</strong> is at the Tank Station by Generator 2, on a shelf.</p>
+            <p><strong>Ice tunnel</strong> is across from Generator 6, on the left as you exit the church. The
+            Maxis Drone <strong>Frame</strong> can spawn right there in front of the portal.</p>
+            <label class="check"><input type="checkbox" data-check="ice-built" /><span>Ice Staff built</span></label>
+            <label class="check"><input type="checkbox" data-check="ice-up" /><span>Upgraded to Ull's Arrow</span></label>
+          </div>
+        </div>
+
+        <div class="upgrade-row">
+          <div class="upgrade-letter">A</div>
+          <div>
+            <h4>Crazy Place &mdash; flip six panels</h4>
+            <p>Six floating stone panels sit above the portal, each with a base-4 symbol. A blue ice panel
+            on the wall shows a <strong>dot pattern</strong> in base 3. Read the pattern, find the floating panel
+            with the matching value, shoot it with the Ice Staff. It flips and the wall shows the next one.
+            Flip all six.</p>
+            <div class="callout callout-warn">
+              <b>One miss resets everything</b>
+              Shoot the wrong panel and every flip so far reverts. Twelve patterns exist, six appear per
+              game, and the pairing is randomised, so there is no memorisable answer. Have someone hold
+              the horde while you read. Chart in <a href="#keys">Puzzle Keys</a>.
+            </div>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">B</div>
+          <div>
+            <h4>Three water gravestones</h4>
+            <p><strong>Freeze each with the Ice Staff, then destroy it with a bullet weapon.</strong> Do not run staff-only.</p>
+            <ul class="bullets">
+              <li>Right of the <strong>MP40 wall-buy near Generator 4</strong>.</li>
+              <li>Between the <strong>Excavation Site and a giant footprint</strong>, close to Gen 4.</li>
+              <li>On the small hill right of the <strong>Gen 2 bunker back exit</strong>, by the downed mech's hand.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">C</div>
+          <div><h4>Rings, all blue</h4><p>All four ring lights blue, then shoot the blue orb with the Ice Staff.</p></div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">D</div>
+          <div><h4>Charge &mdash; blue pedestal, about 20 kills</h4><p>Best done during the Fire player's grate farm.</p></div>
+        </div>
+
+        <div class="panel" style="margin-top:20px;border-color:var(--ice)">
+          <h3 style="color:var(--ice)">Your superpower: the Zombie Blood farm</h3>
+          <p>Shoot <strong>three flaming carts</strong> with the Ice Staff, upgraded or not, and a
+          <strong>Zombie Blood</strong> spawns by the scaffolding near Pack-a-Punch.</p>
+          <ul class="bullets">
+            <li>Just outside the Excavation Site, by the <strong>MP-40 wall-buy</strong>.</li>
+            <li>By the footprint with the stone chest outside <strong>Gen 5 / Stamin-Up</strong>.</li>
+            <li>Outside the trenches behind the Excavation Site, more toward <strong>Gen 4</strong>.</li>
+          </ul>
+          <p style="margin-top:12px;color:var(--text-muted);font-size:14px"><strong>Once per round.</strong>
+          Never while it is raining. If nobody collects the power-up, the carts will not relight that round.</p>
+          <div class="callout callout-tip">
+            <b>Why it matters</b>
+            Step 5 is entirely gated on this. And with a golden shovel under Zombie Blood you can see glowing
+            orange dig spots that give <strong>Empty Perk Bottles</strong> &mdash; a fifth perk.
+          </div>
+        </div>
+      </div>
+
+      <!-- LIGHTNING -->
+      <div class="staff-panel" id="staff-lightning" data-el="lightning" role="tabpanel" aria-labelledby="tab-lightning" hidden>
+        <div class="staff-head">
+          <span class="staff-name">Kimat's Bite</span>
+          <span class="staff-meta">P3 &middot; purple pedestal &middot; chains between targets</span>
+        </div>
+
+        <figure>
+          <img src="images/tank-route.svg" alt="Diagram of the tank route between the church and the Tank Station with the three Lightning Staff jump-off points marked" width="820" height="330" />
+          <figcaption>One part on the outbound run, two on the return. Two players can split points 2 and 3 in a single trip.</figcaption>
+        </figure>
+
+        <div class="grid grid-2">
+          <div class="panel">
+            <h3>The tank</h3>
+            <p>Parked under the church near Gen 6. <strong>500 points</strong> at the control panel on the tank
+            itself; afterwards it can be called for 500 from the switch at either end. It needs
+            <strong>about two minutes to cool down</strong> at each terminus, and fewer riders means a faster cooldown.</p>
+            <div class="callout callout-tip">
+              <b>Keep riding after you are done</b>
+              Once all three parts are collected, a random power-up spawns at each jump point once per round.
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Record and tunnel</h3>
+            <p><strong>Purple record</strong> is near Generator 4: inside the tunnel by the gateway, on the
+            bandwagon to the left, or on the table by Der Wunderfizz.</p>
+            <p><strong>Lightning tunnel</strong> is near Generator 5, opposite the soul chest.</p>
+            <label class="check"><input type="checkbox" data-check="lightning-built" /><span>Lightning Staff built</span></label>
+            <label class="check"><input type="checkbox" data-check="lightning-up" /><span>Upgraded to Kimat's Bite</span></label>
+          </div>
+        </div>
+
+        <div class="upgrade-row">
+          <div class="upgrade-letter">A</div>
+          <div>
+            <h4>Crazy Place &mdash; the keyboard, and it never changes</h4>
+            <p>Purple triangles near the portal form a keyboard. <strong>Ignore the top row entirely.</strong>
+            Number the seven bottom keys 1 to 7 left to right and play three chords with the staff:</p>
+            <p style="font-family:var(--font-mono);font-size:24px;letter-spacing:0.12em;color:var(--lightning);margin:12px 0">136 &nbsp;&rarr;&nbsp; 357 &nbsp;&rarr;&nbsp; 246</p>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">B</div>
+          <div>
+            <h4>Seven electrical panels &mdash; pre-turn them from round 1</h4>
+            <p>Eight panels exist and one is pre-completed. After the riddle they spark <strong>one at a time in
+            this exact order</strong>, but you can turn any of them at any point in the game, riddle or not.</p>
+            <div class="table-wrap" style="margin:12px 0">
+              <table>
+                <thead><tr><th>#</th><th>Location</th><th>Point it</th></tr></thead>
+                <tbody>
+                  <tr><td class="num">1</td><td>Right next to Generator 5</td><td><strong>Down</strong></td></tr>
+                  <tr><td class="num">2</td><td>Church basement, by the torch numbered 3</td><td><strong>Right</strong></td></tr>
+                  <tr><td class="num">3</td><td>Church upstairs, by the repairable window</td><td><strong>Up</strong></td></tr>
+                  <tr><td class="num">4</td><td>Next to the Wind tunnel, right of its entrance</td><td><strong>Up</strong></td></tr>
+                  <tr><td class="num">5</td><td>Spawn room, bottom of the stairs</td><td><strong>Left</strong></td></tr>
+                  <tr><td class="num">6</td><td>Tank Station, left of the back door</td><td><strong>Down</strong></td></tr>
+                  <tr><td class="num">7</td><td>Behind the Excavation Site, by the church path</td><td><strong>Up</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout callout-warn">
+              <b>Decoy</b>
+              There is an eighth panel just before the No Man's Land door in the Workshop, on the right. It does nothing.
+            </div>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">C</div>
+          <div><h4>Rings, all purple</h4><p>All four ring lights purple, then shoot the purple orb with the Lightning Staff.</p></div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">D</div>
+          <div>
+            <h4>Charge &mdash; purple pedestal, 25 kills</h4>
+            <p>Lightning wants <strong>25</strong>, slightly more than the other three.</p>
+            <div class="callout">
+              <b>Honest expectation</b>
+              Past round 25 normal shots only make crawlers without headshots; the charged orb holds to round
+              30 to 40. It is the weakest of the four late, so plan on a Pack-a-Punched gun or the Magna
+              Collider alongside it. In BO2 it also comes off the pedestal with 9 shots instead of 12.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIND -->
+      <div class="staff-panel" id="staff-wind" data-el="wind" role="tabpanel" aria-labelledby="tab-wind" hidden>
+        <div class="staff-head">
+          <span class="staff-name">Boreas' Fury</span>
+          <span class="staff-meta">P4 &middot; yellow pedestal &middot; charged vortex, the best panic button</span>
+        </div>
+
+        <div class="panel" style="border-color:var(--wind);margin-bottom:18px">
+          <h3 style="color:var(--wind)">Job one: the gramophone</h3>
+          <p>It always spawns on the floor of the Excavation Site main chamber. One player carries it and
+          it unlocks five things, so it is yours. <strong>Do the black record first &mdash; nobody can build
+          anything until the lower levels are open.</strong></p>
+          <div class="table-wrap" style="margin:12px 0">
+            <table>
+              <thead><tr><th>Record</th><th>Opens</th><th>Where it spawns</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Black</strong></td><td>Lower Excavation &mdash; pedestals and rings</td><td>Outside the Excavation Site: by the sign, in the wheelbarrow near Pack-a-Punch, or in the trench by the church debris</td></tr>
+                <tr><td style="color:var(--fire)"><strong>Red</strong></td><td>Fire portal</td><td>Near the church: boxes by the tank and staircase, benches opposite the basin, boxes by Gen 6</td></tr>
+                <tr><td style="color:var(--wind)"><strong>Yellow</strong></td><td>Wind portal</td><td>Near Gen 5: broken wall right of Stamin-Up, boxes by the Lightning tunnel, table inside it</td></tr>
+                <tr><td style="color:var(--lightning)"><strong>Purple</strong></td><td>Lightning portal</td><td>Near Gen 4: inside the tunnel, the bandwagon on the left, the table by Der Wunderfizz</td></tr>
+                <tr><td style="color:var(--ice)"><strong>Blue</strong></td><td>Ice portal</td><td>Tank Station by Gen 2, on a shelf</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>The circuit, in map order:</strong> Fire tunnel by the spawn exit, Wind tunnel at Gen 4,
+          Lightning tunnel at Gen 5, Ice tunnel by the church. Announce each trip &mdash; everyone should come,
+          because a used portal can be rebuilt later from inside the Crazy Place.</p>
+          <label class="check"><input type="checkbox" data-check="black-record" /><span>Black record played &mdash; lower Excavation open</span></label>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="panel">
+            <h3>Three parts &mdash; one per robot</h3>
+            <p>Freya (left, church), Odin (centre, Excavation), Thor (right, Gens 2 and 3). One part each.</p>
+            <ol class="steps-ol">
+              <li>Watch a robot approach. <strong>One foot per pass glows</strong>, chosen at random.</li>
+              <li><strong>Shoot the glowing foot.</strong></li>
+              <li>Stand under it and let it step on you. You wake up in the head.</li>
+            </ol>
+            <div class="callout callout-warn">
+              <b>A foot you have not shot downs you instantly</b>
+              Ask the Ice player for the <strong>Golden Helmet</strong> as soon as they have a golden shovel. It
+              makes robot feet harmless and turns this job, plus steps 2 and 3, into a formality.
+            </div>
+            <label class="check"><input type="checkbox" data-check="wind-built" /><span>Wind Staff built</span></label>
+            <label class="check"><input type="checkbox" data-check="wind-up" /><span>Upgraded to Boreas' Fury</span></label>
+          </div>
+          <div class="panel">
+            <h3>Where the smoking balls are</h3>
+            <img src="images/surface-tasks.svg" alt="Diagram showing the three ice gravestones, three wind smoking balls, three flaming carts and the seal near Generator 5" width="820" height="430" style="border-radius:8px" />
+            <p style="margin-top:10px;font-size:14px;color:var(--text-muted)">Same diagram covers the ice
+            gravestones and the flaming carts. Approximate positions &mdash; use the written locations for the
+            exact spot.</p>
+          </div>
+        </div>
+
+        <div class="upgrade-row">
+          <div class="upgrade-letter">A</div>
+          <div>
+            <h4>Crazy Place &mdash; align four concentric rings</h4>
+            <p>Four concentric rings sit above the portal, each carrying four symbols, and each pillar shows
+            a target. Shoot a ring with the Wind Staff to rotate it until every row of symbols adds up to the
+            value on the pillar it points at.</p>
+            <p><strong>Reading base 4:</strong> count the lines in each shape. One shape is its own count. Two
+            shapes are (first &times; 4) + last. Three shapes are (first &times; 16) + (second &times; 4) + last.</p>
+            <div class="callout callout-tip">
+              <b>Shortcut</b>
+              The correct final arrangement never changes &mdash; only the starting rotation is random. Match the
+              chart in <a href="#keys">Puzzle Keys</a> instead of doing the arithmetic. Best vantage point is
+              between the rocks to the right of the gateway.
+            </div>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">B</div>
+          <div>
+            <h4>Three smoking stone balls</h4>
+            <p>Shoot each with the Wind Staff to rotate it until its smoke blows <strong>toward the Excavation Site</strong>.</p>
+            <ul class="bullets">
+              <li>Behind the <strong>Stamin-Up</strong> machine at Generator 5.</li>
+              <li>Between <strong>Generator 4 and the Wind tunnel</strong>.</li>
+              <li>On the outside section of <strong>No Man's Land</strong>, on the tank's return path.</li>
+            </ul>
+            <div class="callout callout-warn">
+              <b>Ball 3 has a side</b>
+              Approach it from the right direction or you push the smoke the wrong way. Backtrack the tank
+              path from the church, or jump off the tank on its return. Coordinate with P3's run.
+            </div>
+          </div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">C</div>
+          <div><h4>Rings, all yellow</h4><p>All four ring lights yellow, then shoot the yellow orb with the Wind Staff.</p></div>
+        </div>
+        <div class="upgrade-row">
+          <div class="upgrade-letter">D</div>
+          <div><h4>Charge &mdash; yellow pedestal, about 20 kills</h4><p>Ride the Fire player's grate farm for free charge.</p></div>
+        </div>
+      </div>
+
+      <figure style="margin-top:24px">
+        <img src="images/ring-puzzle.svg" alt="Diagram of the ring puzzle: four concentric rings with coloured lights, four levers around the lower Excavation Site, and the orb at the centre" width="640" height="400" />
+        <figcaption>Step C for every staff. Four levers, four rings, one orb. Two levers are on the walkway and two on the wooden scaffolding.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= STEPS ================= -->
+    <section id="steps">
+      <div class="section-head">
+        <h2>The eight steps</h2>
+        <p>Steps 2 through 8 are strictly ordered. Step 7 pops the trophy and step 8 ends the game.</p>
+      </div>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">01</div>
+          <div class="egg-titles">
+            <h3>Secure the keys</h3>
+            <div class="egg-kicker">Prerequisite phase &middot; rounds 1&ndash;15</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <p>Build <em>and</em> upgrade all four staffs. Each is three parts plus an elemental gem, built at
+          its coloured pedestal on the lowest level of the Excavation Site &mdash; which only opens once the
+          gramophone plays the <strong>black record</strong> in the main chamber.</p>
+          <div class="callout callout-warn">
+            <b>Silent failure</b>
+            The step only registers once all six generators have been live <em>at the same time</em>, at least
+            once, <em>after</em> the last staff was built. If nothing ticks, re-cap everything.
+          </div>
+          <label class="check"><input type="checkbox" data-check="s1" /><span>All four staffs upgraded and all six generators live together</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">02</div>
+          <div class="egg-titles">
+            <h3>Ascend from darkness</h3>
+            <div class="egg-kicker">All four ultimate staffs required</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <p>Four pedestals appear and each accepts exactly one staff.</p>
+          <div class="table-wrap" style="margin:12px 0">
+            <table>
+              <thead><tr><th>Staff</th><th>Goes into</th><th>Which robot</th></tr></thead>
+              <tbody>
+                <tr><td style="color:var(--ice)"><strong>Ull's Arrow</strong></td><td>Freya</td><td>Left, treads around the church</td></tr>
+                <tr><td style="color:var(--wind)"><strong>Boreas' Fury</strong></td><td>Odin</td><td>Centre, treads the Excavation Site</td></tr>
+                <tr><td style="color:var(--lightning)"><strong>Kimat's Bite</strong></td><td>Thor</td><td>Right, treads over Gens 2 and 3</td></tr>
+                <tr><td style="color:var(--fire)"><strong>Kagutsuchi's Blood</strong></td><td>Staff room</td><td>Fourth pedestal, lowest Excavation level</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Order does not matter. <strong>All six generators must be active</strong> or the pedestals will not
+          despawn and the step will not register.</p>
+          <div class="callout">
+            <b>BO2-only shortcut</b>
+            Put the Fire Staff in the new staff-room pedestal, then press action on its <em>original</em>
+            pedestal to take it straight back. Repeat four times and the game counts all four placements.
+            Patched in BO3. Side effects are mostly visual.
+          </div>
+          <label class="check"><input type="checkbox" data-check="s2" /><span>Step 2 &mdash; staffs placed, pedestals gone</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step for-role" data-role-tag="wind">
+        <div class="egg-head">
+          <div class="egg-num">03</div>
+          <div class="egg-titles">
+            <h3>Rain fire <span class="your-job">YOUR CALL</span></h3>
+            <div class="egg-kicker">Two players &middot; tight timing &middot; needs a G-Strike</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <ol class="steps-ol">
+            <li><strong>Player A</strong> boards a robot and presses the <strong>red button</strong> inside its head. The Wind player is the natural pick.</li>
+            <li><strong>Player B</strong>, already at Generator 5 with a G-Strike primed, throws the beacon onto the <strong>seal</strong> &mdash; a circle of cracked stone on the ground behind and to the right of Gen 5, out of bounds.</li>
+            <li>The robots shell the seal and crack it open.</li>
+          </ol>
+          <div class="callout callout-warn">
+            <b>If it misses</b>
+            A beacon thrown off-target vanishes and the Demonic Announcer laughs. After step 2 all three
+            robots roam at once with only one lit foot between them, so expect several attempts.
+          </div>
+          <p style="color:var(--text-muted);font-size:14.5px"><strong>Solo or duo:</strong> enter Odin from a
+          footprint (the Stamin-Up side aims better), press the button as Maxis says
+          <span class="kbd">one</span> during the purge count &mdash; being purged is faster than ejecting &mdash;
+          then sprint to the seal, priming on the way.</p>
+          <label class="check"><input type="checkbox" data-check="s3" /><span>Step 3 &mdash; seal cracked</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">04</div>
+          <div class="egg-titles">
+            <h3>Unleash the horde</h3>
+            <div class="egg-kicker">Boss wave &middot; bring your best guns</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <p>Deploy the <strong>Maxis Drone</strong> as close to the broken seal as possible. He flies into the
+          pit and <strong>ten Panzersoldats</strong> come out &mdash; that is the four-player count; solo gets two.
+          Kill every one.</p>
+          <ul class="bullets">
+            <li>Upgraded staffs, Ray Gun Mark II, G-Strikes and Pack-a-Punched LMGs all pull their weight.</li>
+            <li>Split them up. Do not let two lock onto the same player.</li>
+            <li>Shoot the <strong>small red light on the claw arm</strong> to free a grabbed teammate. Meleeing the light works too.</li>
+          </ul>
+          <p style="color:var(--text-muted);font-size:14.5px">The drone will not return to its station until you recover it in step 5.</p>
+          <label class="check"><input type="checkbox" data-check="s4" /><span>Step 4 &mdash; ten Panzersoldats down</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step for-role" data-role-tag="ice">
+        <div class="egg-head">
+          <div class="egg-num">05</div>
+          <div class="egg-titles">
+            <h3>Skewer the winged beast <span class="your-job">YOU SUPPLY IT</span></h3>
+            <div class="egg-kicker">Gated entirely on Zombie Blood</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <ol class="steps-ol">
+            <li>Get a <strong>Zombie Blood</strong>. The Ice player's flaming-cart farm is the repeatable source &mdash; once per round, never while raining.</li>
+            <li>While it is active a <strong>glowing plane</strong> is visible above the Excavation Site. Shoot it down.</li>
+            <li>The <strong>zombie pilot</strong> drops out and runs <strong>clockwise</strong> around the Excavation Site, visible only under Zombie Blood. Run <strong>counter-clockwise</strong> to meet him.</li>
+            <li>Kill him. He drops the <strong>upgraded Maxis Drone</strong> with a Pack-a-Punched MG08/15.</li>
+          </ol>
+          <div class="callout callout-tip">
+            <b>Stack first</b>
+            Bank two or three Zombie Bloods before you start. The timer is short and you will probably need a second run.
+          </div>
+          <label class="check"><input type="checkbox" data-check="s5" /><span>Step 5 &mdash; pilot killed, drone recovered</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">06</div>
+          <div class="egg-titles">
+            <h3>Wield a fist of iron</h3>
+            <div class="egg-kicker">Every player must complete this individually</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <ol class="steps-ol">
+            <li>Everyone needs the <strong>One Inch Punch</strong> first &mdash; four soul chests at 30 kills each, claimed from a Rituals of the Ancients board.</li>
+            <li>Go <strong>inside the Excavation Site</strong>. Crusaders now spawn with <strong>white glowing arms</strong>.</li>
+            <li>Hit roughly <strong>20</strong> of them. The shockwave counts, so you do not have to kill them.</li>
+            <li>A glowing white tablet drops. Pick it up for <strong>Iron Fists</strong>.</li>
+          </ol>
+          <div class="callout callout-warn">
+            <b>Run-ending mistake</b>
+            Do not punch Crusaders still climbing in through the walls. The tablet can drop out of reach and
+            that makes the rest of the Easter Egg impossible. Pull them into the open first.
+          </div>
+          <p style="color:var(--text-muted);font-size:14.5px">In BO2 the Iron Fists inherit the element of
+          whatever staff you held when you picked up the tablet. Removed in BO3.</p>
+          <label class="check"><input type="checkbox" data-check="s6" /><span>Step 6 &mdash; everyone has Iron Fists</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">07</div>
+          <div class="egg-titles">
+            <h3>Raise hell</h3>
+            <div class="egg-kicker">The trophy unlocks here</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <p>Place all four ultimate staffs on their pedestals <strong>inside the Crazy Place</strong>, then kill
+          <strong>100 Templar zombies</strong> in there. Souls stream into the centre, the screen flashes white,
+          and the ceiling turns into a vortex.</p>
+          <div class="callout callout-tip">
+            <b>Best hold-out in the map</b>
+            Once this is done the Crazy Place is wide open with no Panzers and no robots, and the achievement
+            is already banked. Farm high rounds here if you want, because step 8 is a one-way door.
+          </div>
+          <label class="check"><input type="checkbox" data-check="s7" /><span>Step 7 &mdash; 100 souls, portal open, trophy popped</span></label>
+        </div>
+      </article>
+
+      <article class="egg-step">
+        <div class="egg-head">
+          <div class="egg-num">08</div>
+          <div class="egg-titles">
+            <h3>Freedom</h3>
+            <div class="egg-kicker">Ends the match</div>
+          </div>
+        </div>
+        <div class="egg-body">
+          <ol class="steps-ol">
+            <li>Deploy the <strong>Maxis Drone</strong> in the <strong>centre of the Crazy Place</strong>. He rises into the portal.</li>
+            <li>Hold action on the <strong>blue rock in the centre</strong> to access the teleporter.</li>
+          </ol>
+          <div class="callout callout-warn">
+            <b>Point of no return</b>
+            This ends the game. Finish your camos, trophies and high rounds first. And if the six generators
+            were not all live together at some point after step 5, the teleporter will not fire until you re-cap them.
+          </div>
+          <label class="check"><input type="checkbox" data-check="s8" /><span>Step 8 &mdash; Samantha free</span></label>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= KEYS ================= -->
+    <section id="keys">
+      <div class="section-head">
+        <h2>Puzzle keys</h2>
+        <p>The four reference charts. Fire, Ice and Wind are read fresh every game; Lightning is a fixed
+        answer you can memorise.</p>
+      </div>
+
+      <div class="callout" style="margin-bottom:18px">
+        <b>Lightning, memorise this</b>
+        Bottom row only, keys numbered 1 to 7 left to right: <strong>136</strong>, then <strong>357</strong>,
+        then <strong>246</strong>. It is the same in every game.
+      </div>
+
+      <div class="key-grid">
+        <figure>
+          <img src="https://static.wikia.nocookie.net/callofduty/images/d/d5/Fire_Staff_Challenge_Symbols_Key_Origins_BOII.png" alt="Fire Staff symbol to torch number reference chart" loading="lazy" />
+          <figcaption><strong style="color:var(--fire)">FIRE</strong> &mdash; the four lit symbols upstairs give
+          the four torch numbers in the basement. 4 is always one of them.
+          <span class="src">Call of Duty Wiki (Fandom)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://static.wikia.nocookie.net/callofduty/images/3/39/Ice_Staff_Challenge_Symbols_Key_Origins_BOII.png" alt="Ice Staff dot pattern to floating stone symbol reference chart" loading="lazy" />
+          <figcaption><strong style="color:var(--ice)">ICE</strong> &mdash; match the wall's dot pattern to a
+          floating panel. Six flips and no mistakes.
+          <span class="src">Call of Duty Wiki (Fandom)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://static.wikia.nocookie.net/callofduty/images/b/b5/Lightning_Staff_Keyboard_Key_Origins_BOII.png" alt="Lightning Staff keyboard numbering reference chart" loading="lazy" />
+          <figcaption><strong style="color:var(--lightning)">LIGHTNING</strong> &mdash; key numbering for
+          <span class="kbd">136</span> <span class="kbd">357</span> <span class="kbd">246</span>.
+          <span class="src">Call of Duty Wiki (Fandom)</span></figcaption>
+        </figure>
+        <figure>
+          <img src="https://static.wikia.nocookie.net/callofduty/images/a/ab/Wind_Staff_Challenge_Symbols_Key_Origins_BOII.png" alt="Wind Staff ring alignment reference chart" loading="lazy" />
+          <figcaption><strong style="color:var(--wind)">WIND</strong> &mdash; rotate the four rings so each row
+          sums to its pillar. The solution is fixed.
+          <span class="src">Call of Duty Wiki (Fandom)</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= GEAR ================= -->
+    <section id="gear">
+      <div class="section-head">
+        <h2>Gear and buildables</h2>
+        <p>Everything that is not a staff but still gates a step.</p>
+      </div>
+
+      <figure>
+        <img src="images/gstrike-loop.svg" alt="Diagram of the G-Strike tablet loop between the Tank Station and the church, with a warning not to step in mud" width="820" height="320" />
+        <figcaption>All four players can run their own tablet at the same time.</figcaption>
+      </figure>
+
+      <div class="grid grid-2">
+        <div class="panel">
+          <h3>G-Strike beacon</h3>
+          <div class="egg-kicker" style="margin-bottom:10px">Required for step 3</div>
+          <ol class="steps-ol">
+            <li><strong>Tank Station:</strong> take a <strong>dirty stone tablet</strong>. No prompt appears, just press action on it. There are four.</li>
+            <li>Carry it to the <strong>church basin of holy water</strong> and insert it.</li>
+            <li><strong>20 melee kills</strong> near the basin, then take the cleansed tablet.</li>
+            <li>Return it to the <strong>Tank Station table without stepping in mud</strong>. Muddy means going back to rinse it.</li>
+            <li><strong>20 more melee kills</strong> near the table and the beacon appears.</li>
+          </ol>
+          <div class="callout callout-warn">
+            <b>Do it early</b>
+            40 melee kills at round 20 and up is misery. Get the One Inch Punch first if you can.
+          </div>
+          <label class="check"><input type="checkbox" data-check="gstrike" /><span>G-Strike obtained</span></label>
+        </div>
+
+        <div class="panel">
+          <h3>One Inch Punch</h3>
+          <div class="egg-kicker" style="margin-bottom:10px">Every player needs it &middot; gates step 6</div>
+          <p>Fill <strong>four soul chests</strong>, 30 kills each. Any player's kills count and a chest vanishes
+          when full. Claim it at a <strong>Rituals of the Ancients</strong> board at Gen 1 or Gen 6: aim at the
+          <strong>bottom-most medal</strong> and press action.</p>
+          <img src="images/soul-chests.svg" alt="Diagram of the four soul chest locations in giant robot footprints, with the safe one on the Excavation to church path marked" width="820" height="400" style="border-radius:8px;margin-top:10px" />
+          <label class="check"><input type="checkbox" data-check="punch" /><span>One Inch Punch claimed</span></label>
+        </div>
+
+        <div class="panel">
+          <h3>Maxis Drone</h3>
+          <div class="egg-kicker" style="margin-bottom:10px">Gates steps 4 and 8</div>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>Part</th><th>Where</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Brain</strong></td><td>Always a table on the lower floor of the starting room, by the stairs to Gen 1</td></tr>
+                <tr><td><strong>Frame</strong></td><td>Ice tunnel in front of the portal, or by the crossbone signs on the tank's mud path toward Gen 4 or Gen 5</td></tr>
+                <tr><td><strong>Rotor</strong></td><td>Very bottom of the Excavation Site on a scaffolding box, the top near Pack-a-Punch, or around the secret entrance</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout-tip">
+            <b>Free Pack-a-Punched LMG</b>
+            Carrying the drone, stand near four small yellow discs: the destroyed roof beside Gen 5, the
+            flaming-debris trench hole just outside the spawn door toward Gen 2, the roof of the broken church
+            on the tank path to Gen 4, and the scaffold above the Excavation entrance nearest the church.
+            All four and the drone drops a <strong>Magna Collider</strong> at Pack-a-Punch.
+          </div>
+          <label class="check"><input type="checkbox" data-check="drone" /><span>Maxis Drone built</span></label>
+        </div>
+
+        <div class="panel for-role" data-role-tag="ice">
+          <h3>Shovels and the Golden Shovel <span class="your-job">YOUR JOB</span></h3>
+          <p>Four shovels. Two always in <strong>spawn</strong> &mdash; by the starting radio, and in the corridor
+          between a barrier and the Gen 3 door. The other two spawn at any two of: the church by the tank
+          treads, the Wind tunnel by Gen 4, the Lightning tunnel by Gen 5.</p>
+          <p><strong>Dig 30 spots in a game</strong> and your shovel turns gold. Better digs, fewer grenades, and
+          two things that matter:</p>
+          <ul class="bullets">
+            <li><strong>Golden Helmet</strong> &mdash; robot feet stop downing you. Hand it to the Wind player.</li>
+            <li><strong>Empty Perk Bottles</strong> &mdash; glowing orange dig spots seen under Zombie Blood. A fifth perk.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Zombie Shield</h3>
+          <p style="color:var(--text-muted);font-size:14px">Optional, but it makes reviving and the Panzer wave far safer.</p>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <tbody>
+                <tr><td><strong>Face Screen</strong></td><td>Fire tunnel table right of the gateway, the trench room right of it, or the trench tunnel near Speed Cola behind the crate</td></tr>
+                <tr><td><strong>Handles</strong></td><td>Trench room right of the first area toward Gen 2, the end of the trenches past Gen 2, or atop the Tank Station by broken piping</td></tr>
+                <tr><td><strong>Frame</strong></td><td>Near Gen 4 left of the MP40, the marshland just outside Gen 4, or another robot footprint near the Excavation Site</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Rituals of the Ancients</h3>
+          <p style="color:var(--text-muted);font-size:14px">Four objectives, spent at the boards by Gen 1 or Gen 6.</p>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>Objective</th><th>Reward</th></tr></thead>
+              <tbody>
+                <tr><td>Spend 30,000 points</td><td>Double Tap Root Beer</td></tr>
+                <tr><td>115 normal-zombie headshots (Templars do not count)</td><td>Pack-a-Punched Galil, STG-44 or SCAR-H</td></tr>
+                <tr><td>Capture all six generators</td><td>Max Ammo</td></tr>
+                <tr><td>Fill four soul chests</td><td>One Inch Punch</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin-top:12px;color:var(--text-muted);font-size:14px">All four in one game is the
+          <em>Overachiever</em> trophy. Headshot with the Mauser from round 1 and the 115 arrives on its own.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HELP ================= -->
+    <section id="help">
+      <div class="section-head">
+        <h2>House rules</h2>
+        <p>Read this before you load in. Most failed runs die on one of these.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="panel">
+          <ul class="bullets">
+            <li><strong>Nobody ends a round alone.</strong> Call it, agree, then end it.</li>
+            <li><strong>Snow is sacred.</strong> While it snows the round stays open until the Ice player says otherwise.</li>
+            <li><strong>Do not pick up Nukes.</strong> A Nuke wipes the map and can end a round mid-step. Same caution with Insta-Kill while someone is farming melee or chest kills.</li>
+            <li><strong>Melee is required, not forbidden.</strong> The G-Strike needs 40 melee kills and step 6 needs about 20 punches.</li>
+            <li><strong>Guns:</strong> keep the <strong>Mauser C96</strong> and Pack-a-Punch it. Buy the <strong>MP40</strong> early, at the Tank Station and near Gen 4. Both fall off hard past round 20.</li>
+            <li><strong>Panzersoldat</strong> first spawns round 8 with the No Man's Land door open, then every 3 to 5 rounds. Immune to Monkey Bombs and G-Strikes.</li>
+            <li><strong>Robot feet down you instantly</strong> unless you are wearing the Golden Helmet.</li>
+            <li><strong>Staffs never break.</strong> Lose one and it returns to its pedestal, upgrade intact.</li>
+            <li><strong>Step 7 gives the trophy, step 8 ends the game.</strong> Do everything else first.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>BO2 vs BO3 Chronicles</h3>
+          <div class="table-wrap" style="border:0">
+            <table>
+              <thead><tr><th>&nbsp;</th><th>Black Ops II</th><th>Black Ops III</th></tr></thead>
+              <tbody>
+                <tr><td>G-Strikes</td><td>2</td><td>3</td></tr>
+                <tr><td>Step 2 pedestal glitch</td><td>Works</td><td>Patched</td></tr>
+                <tr><td>Iron Fists element</td><td>Yes</td><td>Removed</td></tr>
+                <tr><td>PhD Flopper</td><td>In Wunderfizz</td><td>Widow's Wine instead</td></tr>
+                <tr><td>Lightning start ammo</td><td>9 (bug)</td><td>12</td></tr>
+                <tr><td>Ice blast</td><td>May not kill instantly</td><td>Instant</td></tr>
+                <tr><td>GobbleGums</td><td>&mdash;</td><td>Available</td></tr>
+                <tr><td>Easy difficulty</td><td>Easter Egg blocked</td><td>&mdash;</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LINKS ================= -->
+    <section id="links">
+      <div class="section-head">
+        <h2>Sources</h2>
+        <p>Everything here was cross-checked against these. Handy if you want a video mid-game.</p>
+      </div>
+
+      <p class="panel-title-sm">Video walkthroughs</p>
+      <div class="link-grid" style="margin-bottom:20px">
+        <a class="link-card" href="https://www.youtube.com/watch?v=8hBcNDWEZ8I&amp;t=7907s" target="_blank" rel="noopener"><b>Origins full beginners guide</b><span>YouTube &middot; BO2 walkthrough</span></a>
+        <a class="link-card" href="https://www.youtube.com/watch?v=yuXhb7kVKJc" target="_blank" rel="noopener"><b>MrRoflWaffles ultimate guide</b><span>YouTube &middot; step by step</span></a>
+        <a class="link-card" href="https://www.youtube.com/watch?v=rnnMvruDHvE" target="_blank" rel="noopener"><b>Fire Staff church torches in depth</b><span>YouTube &middot; symbol translations</span></a>
+        <a class="link-card" href="https://www.youtube.com/watch?v=Q7jpKOjW8tI" target="_blank" rel="noopener"><b>Origins EE, no time-wasting</b><span>YouTube &middot; speedrun route</span></a>
+      </div>
+
+      <p class="panel-title-sm">Written references</p>
+      <div class="link-grid">
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/Little_Lost_Girl" target="_blank" rel="noopener"><b>Little Lost Girl</b><span>CoD Wiki &middot; the eight steps</span></a>
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/Elemental_Staffs" target="_blank" rel="noopener"><b>Elemental Staffs</b><span>CoD Wiki &middot; parts and upgrades</span></a>
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/G-Strike" target="_blank" rel="noopener"><b>G-Strike</b><span>CoD Wiki</span></a>
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/Maxis_Drone" target="_blank" rel="noopener"><b>Maxis Drone</b><span>CoD Wiki &middot; parts and discs</span></a>
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/One_Inch_Punch" target="_blank" rel="noopener"><b>One Inch Punch</b><span>CoD Wiki &middot; soul chests</span></a>
+        <a class="link-card" href="https://callofduty.fandom.com/wiki/The_Crazy_Place" target="_blank" rel="noopener"><b>The Crazy Place</b><span>CoD Wiki &middot; portals</span></a>
+        <a class="link-card" href="https://www.reddit.com/r/CODZombies/comments/1ldk4v/complete_origins_easter_egg_steps/" target="_blank" rel="noopener"><b>Complete Origins EE steps</b><span>Reddit &middot; r/CODZombies</span></a>
+        <a class="link-card" href="https://steamcommunity.com/sharedfiles/filedetails/?id=188521680" target="_blank" rel="noopener"><b>A guide for Origins</b><span>Steam Community</span></a>
+        <a class="link-card" href="https://steamcommunity.com/sharedfiles/filedetails/?id=748193724" target="_blank" rel="noopener"><b>Origins: staffs and upgrades</b><span>Steam Community</span></a>
+        <a class="link-card" href="https://xcibe95x.com/articles/bo2-origins-easter-egg-guide" target="_blank" rel="noopener"><b>Origins EE guide, BO2 on PS5</b><span>XCIBE95X</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Puzzle key charts from the Call of Duty Wiki (Fandom). Diagrams drawn for this guide.</p>
+    <p><a href="../../../">Back to all guides</a> &middot; Good luck, and do not grab the nuke.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
