@@ -7,6 +7,9 @@ built for a **squad of four**.
 
 Open [`index.html`](./index.html) in a browser (a phone or tablet works best while playing).
 
+There is also [`GUIDE.md`](./GUIDE.md), the same material as one long markdown document. The web page
+is better while you are playing; the markdown is better for searching, skimming and copying from.
+
 Or from the repo root with a simple static server:
 
 ```bash

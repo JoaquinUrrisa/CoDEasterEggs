@@ -24,6 +24,7 @@ Includes:
 - The four puzzle keys in one place
 - Hand-drawn diagrams for the map, tank route, soul chests, ring puzzle and G-Strike loop, with a **Diagram / Photo** switch on the figures that also have an in-game screenshot
 - Per-player briefs in [`players/`](guides/black-ops-2/origins/players/) as a print-styled web page, a PDF, or markdown
+- The whole thing as one long markdown document in [`GUIDE.md`](guides/black-ops-2/origins/GUIDE.md)
 
 ### TranZit — Tower of Babble
 
@@ -63,11 +64,13 @@ Includes:
 ```text
 index.html            # Landing page — pick a map
 tools/                # Optional generators (per-player brief HTML + PDF)
+archive/              # Superseded material, kept for reference
 styles.css            # Landing page styles
 assets/               # Landing page cover art
 guides/
   black-ops-2/
     origins/          # Little Lost Girl interactive guide
+      GUIDE.md        # The same guide as one long markdown document
       images/         # Hand-drawn location / step diagrams
       players/        # Per-player briefs: markdown source, generated HTML + PDF
     tranzit/          # Tower of Babble interactive guide
