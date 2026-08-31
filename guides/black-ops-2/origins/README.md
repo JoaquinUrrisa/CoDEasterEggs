@@ -39,13 +39,32 @@ guide is a **mobile-first web page** so that four players can:
 
 ## Per-player briefs
 
-Pruned single-role versions live in [`players/`](./players/), one per staff. They are plain markdown
-so they print cleanly or can be read on a second screen:
+Pruned single-role versions live in [`players/`](./players/), one per staff, in three formats:
 
-- [Fire Staff (P1)](./players/FireStaff.md) — church and Gen 6, the plane, the round-8 Panzer
-- [Ice Staff (P2)](./players/IceStaff.md) — shovel duty, snow windows, the Zombie Blood farm
-- [Lightning Staff (P3)](./players/LightningStaff.md) — tank driver, the seven electrical panels
-- [Wind Staff (P4)](./players/WindStaff.md) — robot entries, the gramophone circuit
+| Player | Read / print | Download | Source |
+|---|---|---|---|
+| Fire (P1) — church and Gen 6, the plane, the round-8 Panzer | [HTML](./players/FireStaff.html) | [PDF](./players/FireStaff.pdf) | [MD](./players/FireStaff.md) |
+| Ice (P2) — shovel duty, snow windows, the Zombie Blood farm | [HTML](./players/IceStaff.html) | [PDF](./players/IceStaff.pdf) | [MD](./players/IceStaff.md) |
+| Lightning (P3) — tank driver, the seven electrical panels | [HTML](./players/LightningStaff.html) | [PDF](./players/LightningStaff.pdf) | [MD](./players/LightningStaff.md) |
+| Wind (P4) — robot entries, the gramophone circuit | [HTML](./players/WindStaff.html) | [PDF](./players/WindStaff.pdf) | [MD](./players/WindStaff.md) |
+
+The HTML version is dark on screen and switches to black-on-white with A4 page breaks when printed,
+so **Print → Save as PDF** in the browser gives the same result as the committed PDF. Each brief is
+five or six pages.
+
+### Regenerating them
+
+The markdown is the source of truth. After editing a `.md`, rebuild:
+
+```bash
+python3 tools/build_briefs.py          # HTML + PDF
+python3 tools/build_briefs.py --html   # HTML only, no browser needed
+```
+
+The script converts the markdown subset the briefs use, wraps it in a print stylesheet
+([`players/print.css`](./players/print.css)), and renders the PDF with headless Chrome, then
+downsamples images with ghostscript if it is installed — that step takes the set from about 42 MB
+to about 1.3 MB. Generated files are committed, so the site itself still needs no build step.
 
 ## Images
 
