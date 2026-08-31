@@ -657,3 +657,40 @@ body[data-role="lightning"] .for-role[data-role-tag="lightning"] .your-job {
   .media-bar { padding: 7px 8px 7px 12px; gap: 8px; }
   .view-switch-label { display: none; }
 }
+
+/* ---------- per-player brief cards ---------- */
+.brief-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.brief-card {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--el);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  overflow: hidden;
+}
+.brief-card:hover { background: var(--bg-soft); }
+.brief-main { flex: 1; min-width: 0; padding: 12px 14px; text-decoration: none; color: var(--text); }
+.brief-main b { display: block; font-weight: 600; font-size: 14.5px; margin-bottom: 2px; }
+.brief-main span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.brief-formats { display: flex; flex-direction: column; border-left: 1px solid var(--line); }
+.brief-formats a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.brief-formats a:last-child { border-bottom: 0; }
+.brief-formats a:hover { background: var(--bg-soft); color: var(--el); }

@@ -23,7 +23,7 @@ Includes:
 - All eight Easter Egg steps in order, with checklists and saved progress
 - The four puzzle keys in one place
 - Hand-drawn diagrams for the map, tank route, soul chests, ring puzzle and G-Strike loop, with a **Diagram / Photo** switch on the figures that also have an in-game screenshot
-- Printable per-player briefs in [`players/`](guides/black-ops-2/origins/players/)
+- Per-player briefs in [`players/`](guides/black-ops-2/origins/players/) as a print-styled web page, a PDF, or markdown
 
 ### TranZit — Tower of Babble
 
@@ -62,13 +62,14 @@ Includes:
 
 ```text
 index.html            # Landing page — pick a map
+tools/                # Optional generators (per-player brief HTML + PDF)
 styles.css            # Landing page styles
 assets/               # Landing page cover art
 guides/
   black-ops-2/
     origins/          # Little Lost Girl interactive guide
       images/         # Hand-drawn location / step diagrams
-      players/        # Printable per-player briefs
+      players/        # Per-player briefs: markdown source, generated HTML + PDF
     tranzit/          # Tower of Babble interactive guide
       images/         # Location / step diagrams
 ```
